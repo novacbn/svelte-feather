@@ -1,5 +1,5 @@
 <script>
-    import {IconSearch} from "svelte-feather";
+    import {IconSearch, IconXCircle} from "svelte-feather";
 
     import {debounce} from "../util";
 
@@ -18,6 +18,10 @@
             event.preventDefault();
             input_element.focus();
         }
+    }
+
+    function on_reset_click(event) {
+        _value = "";
     }
 
     $: update_value(_value);
@@ -43,5 +47,9 @@
             id="search-text"
             placeholder="Search {count} icons (Press / to focus)"
             bind:value={_value} />
+
+        <button class="button error icon-only" disabled={!_value} on:click={on_reset_click}>
+            <IconXCircle />
+        </button>
     </p>
 </aside>
