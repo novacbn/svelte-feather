@@ -3,6 +3,10 @@
     "description": "Feather Icons as Svelte Components",
     "author": "novacbn",
     "version": "0.0.1",
+    "keywords": [
+        "svelte",
+        "svelte-components"
+    ],
     "main": "lib/index.js",
     "engines": {
         "node": ">=12.0.0"

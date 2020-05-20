@@ -2,10 +2,6 @@
     "name": "svelte-feather-docs",
     "author": "novacbn",
     "version": "0.0.1",
-    "keywords": [
-        "svelte",
-        "svelte-components"
-    ],
     "main": "index.js",
     "scripts": {
         "build:app": "NODE_ENV=production svelvet",
