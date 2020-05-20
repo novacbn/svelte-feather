@@ -1,1 +1,1 @@
-export const TEMPLATE_CODE=({class_name:t})=>`<script>\n    import {${t}} from "svelte-feather";\n<\/script>\n\n<${t} />`;
+export const TEMPLATE_CODE=({class_name:e})=>`<script>\n    import {${e}} from "svelte-feather";\n<\/script>\n\n<${e} />`;export function debounce(e,t){let n;return(...r)=>{n&&(clearTimeout(n),n=null),n=setTimeout(()=>{e(...r)},t)}}
