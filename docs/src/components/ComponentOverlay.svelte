@@ -10,6 +10,13 @@
     function on_overlay_click(event) {
         if (event.target.tagName === "SECTION") component = "";
     }
+
+    let highlight_html = "";
+    $: {
+        const code = TEMPLATE_CODE({class_name: component});
+
+        highlight_html = Prism.highlight(code, Prism.languages.html, "html");
+    }
 </script>
 
 <style>
@@ -56,7 +63,9 @@
         </header>
 
         <pre>
-            <code>{TEMPLATE_CODE({class_name: component})}</code>
+            <code class="language-html">
+                {@html highlight_html}
+            </code>
         </pre>
 
         <footer class="is-right">

@@ -21,7 +21,7 @@
             href="https://github.com/novacbn/svelte-feather/releases"
             target="_blank"
             rel="noopener noreferrer">
-            <span class="tag">v0.0.1</span>
+            <span class="badge">v0.0.1</span>
         </a>
     </div>
 

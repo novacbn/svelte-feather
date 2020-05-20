@@ -31,6 +31,10 @@
     p {
         align-items: center;
     }
+
+    button {
+        z-index: unset !important;
+    }
 </style>
 
 <svelte:body on:keypress={on_key_press} />
