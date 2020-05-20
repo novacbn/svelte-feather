@@ -50,8 +50,11 @@
 
 <section>
     {#each icons as {component, class_name, visible} (class_name)}
-        <a href="#" on:click={(event) => on_anchor_click(event, class_name)}>
-            <article class="card" class:is-hidden={!visible}>
+        <a
+            class:is-hidden={!visible}
+            href="#"
+            on:click={(event) => on_anchor_click(event, class_name)}>
+            <article class="card">
                 <p class="text-center">
                     <svelte:component
                         this={component}

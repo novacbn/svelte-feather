@@ -95,7 +95,7 @@ Runs [`NODE_ENV=production svelvet`](https://github.com/jakedeichert/svelvet) to
 
 ### `npm run serve:app`
 
-Similar to [`npm run build:app`](#npm-run-build-app), runs [`svelvet`](https://github.com/jakedeichert/svelvet) to serve a live-reload enabled HTTP server on port `8080` for debugging the documentation.
+Similar to [`npm run build:app`](#npm-run-buildapp), runs [`svelvet`](https://github.com/jakedeichert/svelvet) to serve a live-reload enabled HTTP server on port `8080` for debugging the documentation.
 
 ### `npm run prebuild:clean`
 
