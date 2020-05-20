@@ -1,4 +1,4 @@
-import * as feather from "/dist/web_modules/svelte-feather.js";
+import * as feather from "/svelte-feather/dist/web_modules/svelte-feather.js";
 export default [{
   component: feather.IconActivity,
   class_name: "IconActivity",
