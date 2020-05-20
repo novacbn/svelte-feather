@@ -1,7 +1,1 @@
-export const TEMPLATE_CODE = ({
-  class_name
-}) => `<script>
-    import {${class_name}} from "svelte-feather";
-</script>
-
-<${class_name} />`;
+export const TEMPLATE_CODE=({class_name:t})=>`<script>\n    import {${t}} from "svelte-feather";\n<\/script>\n\n<${t} />`;

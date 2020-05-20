@@ -1,1 +1,2 @@
-export { SvelteComponentDev as SvelteComponent, afterUpdate, beforeUpdate, createEventDispatcher, getContext, onDestroy, onMount, setContext, tick } from './svelte/internal.js';
+export{c as createEventDispatcher}from"./common/index-9e8678b3.js";
+//# sourceMappingURL=svelte.js.map
