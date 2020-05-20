@@ -1,10 +1,17 @@
 <script>
     import {IconSearch} from "svelte-feather";
 
+    import {debounce} from "../util";
+
     export let count = 0;
     export let value = "";
 
     let input_element;
+    let _value = value;
+
+    const update_value = debounce((v) => {
+        value = v;
+    }, 250);
 
     function on_key_press(event) {
         if (event.key === "/") {
@@ -12,6 +19,8 @@
             input_element.focus();
         }
     }
+
+    $: update_value(_value);
 </script>
 
 <style>
@@ -21,10 +30,6 @@
 </style>
 
 <svelte:body on:keypress={on_key_press} />
-
-<!--
-    TODO: Needs debouncing for input
--->
 
 <aside>
     <p class="grouped">
@@ -37,6 +42,6 @@
             type="text"
             id="search-text"
             placeholder="Search {count} icons (Press / to focus)"
-            bind:value />
+            bind:value={_value} />
     </p>
 </aside>
