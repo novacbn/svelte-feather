@@ -13,14 +13,14 @@
     import SearchBar from "./components/SearchBar";
 
     const component = query_param("component", "");
-    const search = query_param("search", "");
+    const search = query_param("search", "", {replace: true});
 
-    const color = query_param("color", "currentColor");
-    const fill = query_param("fill", "none");
-    const linecap = query_param("linecap", "round");
-    const linejoin = query_param("linejoin", "round");
-    const size = query_param("size", ICON_SIZES.default);
-    const width = query_param("width", "2px");
+    const color = query_param("color", "currentColor", {replace: true});
+    const fill = query_param("fill", "none", {replace: true});
+    const linecap = query_param("linecap", "round", {replace: true});
+    const linejoin = query_param("linejoin", "round", {replace: true});
+    const size = query_param("size", ICON_SIZES.default, {replace: true});
+    const width = query_param("width", "2px", {replace: true});
 
     function on_icon_click(event) {
         $component = event.detail.class_name;
