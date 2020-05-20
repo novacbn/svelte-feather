@@ -1,0 +1,28 @@
+{
+    "name": "svelte-feather",
+    "description": "Feather Icons as Svelte Components",
+    "author": "novacbn",
+    "version": "0.0.1",
+    "main": "lib/index.js",
+    "engines": {
+        "node": ">=12.0.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/novacbn/svelte-feather"
+    },
+    "scripts": {
+        "build:icons": "npm run script:icons;npm run prettify:icons",
+        "link:package": "npm link",
+        "prettify:icons": "prettier ./lib/components/*.svelte --write",
+        "script:icons": "node ./scripts/build_icons.js",
+        "prebuild:clean": "rimraf ./dist"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "feather-icons": "^4.26.0",
+        "prettier": "^1.14.3",
+        "prettier-plugin-svelte": "^1.1.0",
+        "svelte": "^3.22.3"
+    }
+}
