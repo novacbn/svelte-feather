@@ -88,17 +88,32 @@
     }
 
     aside {
-        position: sticky;
-        top: 2rem;
-
-        margin-left: 3rem;
-
-        max-width: 450px;
         height: fit-content;
     }
 
     h4 {
         margin-top: 0;
+    }
+
+    @media screen and (min-width: 900px) {
+        aside {
+            position: sticky;
+            top: 2rem;
+
+            margin-left: 3rem;
+
+            max-width: 450px;
+        }
+    }
+
+    @media screen and (max-width: 899px) {
+        main {
+            flex-direction: column-reverse;
+        }
+
+        hr {
+            margin-bottom: 2rem;
+        }
     }
 </style>
 
@@ -115,7 +130,7 @@
 <PageHeader />
 
 <main class="row">
-    <div class="col-9 is-marginless">
+    <div class="col-12 col-9-md is-marginless">
         <SearchBar count={icons.length} bind:value={$search} />
 
         <TagList on:click={on_tag_click} />
@@ -131,7 +146,9 @@
             on:click={on_icon_click} />
     </div>
 
-    <aside class="col-12 col-3-lg">
+    <hr class="hide-md hide-lg" />
+
+    <aside class="col-12 col-3-md">
         <header class="row">
             <div class="col-7">
                 <h4>Customize</h4>

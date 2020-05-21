@@ -16,6 +16,9 @@
     p {
         display: flex;
 
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+
         overflow-x: auto;
         overflow-y: hidden;
     }

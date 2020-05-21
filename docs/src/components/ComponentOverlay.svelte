@@ -78,6 +78,9 @@
 
     article {
         width: 45vw;
+        min-width: 400px;
+
+        max-width: 600px;
         max-height: 85vh;
 
         overflow-y: auto;
@@ -85,6 +88,10 @@
 
     code {
         user-select: all;
+    }
+
+    a {
+        flex: 1;
     }
 
     .overlay-editor {
@@ -124,6 +131,7 @@
                 on:click={(event) => on_tab_click(event, OVERLAY_TABS.code)}>
                 Sample Code
             </a>
+
             <a
                 class:active={tab === OVERLAY_TABS.editor}
                 href="#"

@@ -4,7 +4,7 @@ export const TEMPLATE_CODE = ({class_name, color, fill, linecap, linejoin, size,
     let properties = Object.entries({color, fill, linecap, linejoin, size, width});
 
     properties = properties.filter(([key, value]) => value !== ICON_DEFAULTS[key]);
-    properties = properties.map(([key, value]) => ` ${key}="${value}"`);
+    properties = properties.map(([key, value]) => `\n    ${key}="${value}"`);
 
     properties = properties.join("");
 
