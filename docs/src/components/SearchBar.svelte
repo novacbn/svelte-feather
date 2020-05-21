@@ -26,6 +26,7 @@
 
     function on_reset_click(event) {
         _value = "";
+        value = "";
     }
 
     $: _value = value;
