@@ -20,11 +20,15 @@
         }
     }
 
+    function on_input(event) {
+        update_value(_value);
+    }
+
     function on_reset_click(event) {
         _value = "";
     }
 
-    $: update_value(_value);
+    $: _value = value;
 </script>
 
 <style>
@@ -50,7 +54,8 @@
             type="text"
             id="search-text"
             placeholder="Search {count} icons (Press / to focus)"
-            bind:value={_value} />
+            bind:value={_value}
+            on:input={on_input} />
 
         <button class="button error icon-only" disabled={!_value} on:click={on_reset_click}>
             <IconXCircle />

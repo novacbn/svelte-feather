@@ -10,6 +10,7 @@
     import PageNav from "./components/PageNav";
     import PageFooter from "./components/PageFooter";
     import SearchBar from "./components/SearchBar";
+    import TagList from "./components/TagList";
 
     const class_name = query_param("class_name", "");
     const search = query_param("search", "", {replace: true});
@@ -30,6 +31,22 @@
     function on_reset_click(event) {
         if (icon_editor) icon_editor.reset();
     }
+
+    function on_tag_click(event) {
+        $search = event.detail.tag;
+    }
+
+    // HACK: This is just so the overlay modal always initializes with the
+    // global editor's props. Not just on changes to the global inputs
+    $: properties = {
+        class_name: $class_name,
+        color: $color,
+        fill: $fill,
+        linecap: $linecap,
+        linejoin: $linejoin,
+        size: $size,
+        width: $width
+    };
 
     let icons = [];
     $: {
@@ -86,20 +103,22 @@
 </style>
 
 <ComponentOverlay
-    color={$color}
-    fill={$fill}
-    linecap={$linecap}
-    linejoin={$linejoin}
-    size={$size}
-    width={$width}
+    color={properties.color}
+    fill={properties.fill}
+    linecap={properties.linecap}
+    linejoin={properties.linejoin}
+    size={properties.size}
+    width={properties.width}
     bind:class_name={$class_name} />
 
 <PageNav />
 <PageHeader />
 
 <main class="row">
-    <div class="col">
+    <div class="col-9 is-marginless">
         <SearchBar count={icons.length} bind:value={$search} />
+
+        <TagList on:click={on_tag_click} />
 
         <IconGrid
             color={$color}
