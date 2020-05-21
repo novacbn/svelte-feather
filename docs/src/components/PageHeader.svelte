@@ -1,9 +1,4 @@
 <style>
-    header {
-        padding-left: 7.5rem;
-        padding-right: 7.5rem;
-    }
-
     code {
         padding-top: 1.25rem;
         padding-bottom: 1.25rem;

@@ -11,7 +11,7 @@
 
     const update_value = debounce((v) => {
         value = v;
-    }, 250);
+    }, 200);
 
     function on_key_press(event) {
         if (event.key === "/") {

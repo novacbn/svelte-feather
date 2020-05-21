@@ -1,22 +1,49 @@
-<script>
-    import {TEMPLATE_CODE} from "../util";
+<script context="module">
+    const OVERLAY_TABS = {
+        code: "code",
+        editor: "editor"
+    };
+</script>
 
-    export let component = "";
+<script>
+    import {ICON_SIZES} from "svelte-feather";
+
+    import {ICON_DEFAULTS, ICON_MAP, ICON_MANIFEST} from "../icons";
+
+    import IconEditor from "./IconEditor";
+    import SampleCode from "./SampleCode";
+
+    export let class_name = "";
+    export let tab = OVERLAY_TABS.code;
+
+    export let color = ICON_DEFAULTS.color;
+    export let fill = ICON_DEFAULTS.fill;
+    export let linecap = ICON_DEFAULTS.linecap;
+    export let linejoin = ICON_DEFAULTS.linejoin;
+    export let size = ICON_DEFAULTS.size;
+    export let width = ICON_DEFAULTS.width;
+
+    let icon_editor;
 
     function on_affirmative_click(event) {
-        component = "";
+        class_name = "";
+    }
+
+    function on_reset_click(event) {
+        if (icon_editor) icon_editor.reset();
     }
 
     function on_overlay_click(event) {
-        if (event.target.tagName === "SECTION") component = "";
+        if (event.target.tagName === "SECTION") class_name = "";
     }
 
-    let highlight_html = "";
-    $: {
-        const code = TEMPLATE_CODE({class_name: component});
+    function on_tab_click(event, identifier) {
+        event.preventDefault();
 
-        highlight_html = Prism.highlight(code, Prism.languages.html, "html");
+        tab = identifier;
     }
+
+    $: component = ICON_MAP[class_name];
 </script>
 
 <style>
@@ -49,27 +76,86 @@
         z-index: -1;
     }
 
+    article {
+        width: 45vw;
+        max-height: 85vh;
+
+        overflow-y: auto;
+    }
+
     code {
         user-select: all;
     }
+
+    .overlay-editor {
+        margin-top: 1.5rem;
+    }
+
+    footer {
+        margin-top: 2rem;
+    }
 </style>
 
-<section class:is-hidden={!component} on:click={on_overlay_click}>
-    <div class="card">
+<section class:is-hidden={!class_name} on:click={on_overlay_click}>
+    <article class="card">
         <header>
             <h3>
-                <code>{component}</code>
+                <code>{class_name}</code>
             </h3>
         </header>
 
-        <pre>
-            <code class="language-html">
-                {@html highlight_html}
-            </code>
-        </pre>
+        <p class="text-center">
+            {#if component}
+                <svelte:component
+                    this={component}
+                    {color}
+                    {fill}
+                    {linecap}
+                    {linejoin}
+                    {size}
+                    {width} />
+            {/if}
+        </p>
+
+        <div class="tabs">
+            <a
+                class:active={tab === OVERLAY_TABS.code}
+                href="#"
+                on:click={(event) => on_tab_click(event, OVERLAY_TABS.code)}>
+                Sample Code
+            </a>
+            <a
+                class:active={tab === OVERLAY_TABS.editor}
+                href="#"
+                on:click={(event) => on_tab_click(event, OVERLAY_TABS.editor)}>
+                Editor
+            </a>
+        </div>
+
+        <SampleCode
+            class={tab === OVERLAY_TABS.code ? '' : 'is-hidden'}
+            {class_name}
+            {color}
+            {fill}
+            {linecap}
+            {linejoin}
+            {size}
+            {width} />
+
+        <div class="overlay-editor" class:is-hidden={tab !== OVERLAY_TABS.editor}>
+            <IconEditor
+                bind:this={icon_editor}
+                bind:color
+                bind:fill
+                bind:linecap
+                bind:linejoin
+                bind:size
+                bind:width />
+        </div>
 
         <footer class="is-right">
+            <button class="button clear" on:click={on_reset_click}>RESET</button>
             <button class="button primary" on:click={on_affirmative_click}>OKAY!</button>
         </footer>
-    </div>
+    </article>
 </section>

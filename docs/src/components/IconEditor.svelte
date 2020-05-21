@@ -17,15 +17,17 @@
 </script>
 
 <script>
+    import {ICON_DEFAULTS} from "../icons";
+
     import InputColor from "./InputColor";
     import InputRange from "./InputRange";
 
-    export let color = "currentColor";
-    export let fill = "none";
-    export let linecap = "round";
-    export let linejoin = "round";
-    export let size = ICON_SIZES.default;
-    export let width = "2px";
+    export let color = ICON_DEFAULTS.color;
+    export let fill = ICON_DEFAULTS.fill;
+    export let linecap = ICON_DEFAULTS.linecap;
+    export let linejoin = ICON_DEFAULTS.linejoin;
+    export let size = ICON_DEFAULTS.size;
+    export let width = ICON_DEFAULTS.size;
 
     let linecap_index = "0";
     let linejoin_index = "0";
@@ -33,20 +35,20 @@
     let size_index = "2";
     let width_index = "3";
 
-    function on_reset_click(event) {
-        color = "currentColor";
-        fill = "none";
+    export function reset() {
+        color = ICON_DEFAULTS.color;
+        fill = ICON_DEFAULTS.fill;
 
-        linecap = "round";
+        linecap = ICON_DEFAULTS.linecap;
         linecap_index = "0";
 
-        linejoin = "round";
+        linejoin = ICON_DEFAULTS.linejoin;
         linejoin_index = "0";
 
-        size = ICON_SIZES.default;
+        size = ICON_DEFAULTS.size;
         size_index = "2";
 
-        width = "2px";
+        width = ICON_DEFAULTS.width;
         width_index = "3";
     }
 </script>
@@ -56,20 +58,6 @@
         margin-top: 0;
     }
 </style>
-
-<!--
-    TODO: Needs debouncing for input
--->
-
-<header class="row">
-    <div class="col-7">
-        <h4>Customize</h4>
-    </div>
-
-    <div class="col-5 text-right">
-        <button on:click={on_reset_click}>RESET</button>
-    </div>
-</header>
 
 <InputRange
     name="size"

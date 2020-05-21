@@ -1,7 +1,7 @@
 <script>
     import {createEventDispatcher} from "svelte";
 
-    import {ICON_SIZES} from "svelte-feather";
+    import {ICON_DEFAULTS} from "../icons";
 
     const dispatch = createEventDispatcher();
 
@@ -9,12 +9,12 @@
     export let class_name = "";
     export let visible = true;
 
-    export let color = "currentColor";
-    export let fill = "none";
-    export let linecap = "round";
-    export let linejoin = "round";
-    export let size = ICON_SIZES.default;
-    export let width = "2px";
+    export let color = ICON_DEFAULTS.color;
+    export let fill = ICON_DEFAULTS.fill;
+    export let linecap = ICON_DEFAULTS.linecap;
+    export let linejoin = ICON_DEFAULTS.linejoin;
+    export let size = ICON_DEFAULTS.size;
+    export let width = ICON_DEFAULTS.size;
 
     function on_anchor_click(event) {
         event.preventDefault();

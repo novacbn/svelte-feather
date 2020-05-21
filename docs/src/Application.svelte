@@ -1,8 +1,7 @@
 <script>
     import {query_param} from "svelte-commons";
-    import {ICON_SIZES} from "svelte-feather";
 
-    import ICONS from "./icons";
+    import {ICON_DEFAULTS, ICON_MANIFEST} from "./icons";
 
     import ComponentOverlay from "./components/ComponentOverlay";
     import IconEditor from "./components/IconEditor";
@@ -12,26 +11,32 @@
     import PageFooter from "./components/PageFooter";
     import SearchBar from "./components/SearchBar";
 
-    const component = query_param("component", "");
+    const class_name = query_param("class_name", "");
     const search = query_param("search", "", {replace: true});
 
-    const color = query_param("color", "currentColor", {replace: true});
-    const fill = query_param("fill", "none", {replace: true});
-    const linecap = query_param("linecap", "round", {replace: true});
-    const linejoin = query_param("linejoin", "round", {replace: true});
-    const size = query_param("size", ICON_SIZES.default, {replace: true});
-    const width = query_param("width", "2px", {replace: true});
+    const color = query_param("color", ICON_DEFAULTS.color, {replace: true});
+    const fill = query_param("fill", ICON_DEFAULTS.fill, {replace: true});
+    const linecap = query_param("linecap", ICON_DEFAULTS.linecap, {replace: true});
+    const linejoin = query_param("linejoin", ICON_DEFAULTS.linejoin, {replace: true});
+    const size = query_param("size", ICON_DEFAULTS.size, {replace: true});
+    const width = query_param("width", ICON_DEFAULTS.width, {replace: true});
+
+    let icon_editor;
 
     function on_icon_click(event) {
-        $component = event.detail.class_name;
+        $class_name = event.detail.class_name;
     }
 
-    let _icons = [];
+    function on_reset_click(event) {
+        if (icon_editor) icon_editor.reset();
+    }
+
+    let icons = [];
     $: {
         if ($search) {
             const search = $search.toLowerCase();
 
-            _icons = ICONS.map(({class_name, component, display_name, name, tags}) => {
+            icons = ICON_MANIFEST.map(({class_name, component, display_name, name, tags}) => {
                 let visible =
                     class_name.toLowerCase().includes(search) ||
                     name.includes(search) ||
@@ -49,7 +54,7 @@
                 return {class_name, component, display_name, name, tags, visible};
             });
         } else {
-            _icons = ICONS.map((icon) => {
+            icons = ICON_MANIFEST.map((icon) => {
                 return {...icon, visible: true};
             });
         }
@@ -74,30 +79,52 @@
         max-width: 450px;
         height: fit-content;
     }
+
+    h4 {
+        margin-top: 0;
+    }
 </style>
 
-<ComponentOverlay bind:component={$component} />
+<ComponentOverlay
+    color={$color}
+    fill={$fill}
+    linecap={$linecap}
+    linejoin={$linejoin}
+    size={$size}
+    width={$width}
+    bind:class_name={$class_name} />
 
 <PageNav />
 <PageHeader />
 
 <main class="row">
     <div class="col">
-        <SearchBar count={_icons.length} bind:value={$search} />
+        <SearchBar count={icons.length} bind:value={$search} />
 
         <IconGrid
-            icons={_icons}
             color={$color}
             fill={$fill}
             linecap={$linecap}
             linejoin={$linejoin}
             size={$size}
             width={$width}
+            {icons}
             on:click={on_icon_click} />
     </div>
 
-    <aside class="col-3">
+    <aside class="col-12 col-3-lg">
+        <header class="row">
+            <div class="col-7">
+                <h4>Customize</h4>
+            </div>
+
+            <div class="col-5 text-right">
+                <button on:click={on_reset_click}>RESET</button>
+            </div>
+        </header>
+
         <IconEditor
+            bind:this={icon_editor}
             bind:color={$color}
             bind:fill={$fill}
             bind:linecap={$linecap}
