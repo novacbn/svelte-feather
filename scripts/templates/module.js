@@ -1,7 +1,13 @@
-module.exports = ({class_names}) => {
-    class_names = class_names.map((class_name) => {
-        return `export {default as ${class_name}} from "./${class_name}.svelte";`;
-    });
+export default ({class_names}) => {
+    return `console.warn("\\n\\n[svelte-feather :: Warning] Importing 'svelte-feather/components' can slow down your Build Tools / IDE Experience, consider importing 'svelte-feather/components/\${COMPONENT NAME}' instead!\\n\\n");
 
-    return class_names.join("\n");
+${class_names
+    .map((class_name) => {
+        return `import {${class_name}} from "./${class_name}";`;
+    })
+    .join("\n")}
+
+export const Icons = {
+${class_names.map((class_name) => `    ${class_name}`).join(",\n")}
+};`;
 };

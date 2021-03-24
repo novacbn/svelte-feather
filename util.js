@@ -3,8 +3,12 @@
  */
 export const ICON_SIZES = {
     default: "default",
+
     tiny: "tiny",
     small: "small",
+
+    medium: "medium",
+
     large: "large",
     huge: "huge"
 };
@@ -13,9 +17,13 @@ export const ICON_SIZES = {
  * Represents the standard size tiers icons can be
  */
 export const ICON_SIZE_UNITS = {
-    [ICON_SIZES.default]: "24px",
+    [ICON_SIZES.default]: "1em",
+
     [ICON_SIZES.tiny]: "12px",
     [ICON_SIZES.small]: "16px",
+
+    [ICON_SIZES.medium]: "24px",
+
     [ICON_SIZES.large]: "32px",
     [ICON_SIZES.huge]: "48px"
 };

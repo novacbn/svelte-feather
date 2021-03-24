@@ -1,10 +1,10 @@
-module.exports = ({icons}) => {
+export default ({icons}) => {
     let all_tags = new Set();
     let icon_map = [];
     let icon_manifest = [];
 
-    icons.map(({class_name, display_name, name, tags}) => {
-        for (tag of tags) all_tags.add(tag);
+    icons.map(({class_name, display_name, icon}) => {
+        for (const tag of icon.tags) all_tags.add(tag);
 
         icon_map.push(`    ${class_name}: feather.${class_name}`);
 
@@ -12,8 +12,8 @@ module.exports = ({icons}) => {
         component: feather.${class_name},
         class_name: "${class_name}",
         display_name: "${display_name}",
-        name: "${name}",
-        tags: ${JSON.stringify(tags)}
+        name: "${icon.name}",
+        tags: ${JSON.stringify(icon.tags)}
     }`);
     });
 
@@ -25,7 +25,7 @@ module.exports = ({icons}) => {
 
     all_tags = JSON.stringify(all_tags, null, 4);
 
-    return `import * as feather from "svelte-feather";
+    return `import {Icons} from "svelte-feather/components";
 
 export const ICON_DEFAULTS = {
     color: "currentColor",
@@ -36,9 +36,7 @@ export const ICON_DEFAULTS = {
     width: "2px"
 };
 
-export const ICON_MAP = {
-${icon_map}
-};
+export const ICON_MAP = Icons;
 
 export const ICON_MANIFEST = [
 ${icon_manifest}

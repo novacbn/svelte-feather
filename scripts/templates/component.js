@@ -1,4 +1,4 @@
-module.exports = ({contents, name}) => `<script>
+export default ({icon}) => `<script>
     import {ICON_SIZES, ICON_SIZE_UNITS, is_size_primitive} from "../util.js";
 
     let _class = "";
@@ -24,9 +24,11 @@ module.exports = ({contents, name}) => `<script>
     }
 </script>
 
+<svelte:options tag="feather-${icon.name}"/>
+
 <svg
     xmlns="http://www.w3.org/2000/svg"
-    class="feather feather-${name} feather-size-{size}
+    class="feather feather-${icon.name} feather-size-{size}
     {_class}"
     width={font_size}
     height={font_size}
@@ -37,5 +39,5 @@ module.exports = ({contents, name}) => `<script>
     stroke-linecap={linecap}
     stroke-linejoin={linejoin}
     {style}>
-    ${contents}
+    ${icon.contents}
 </svg>`;

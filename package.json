@@ -2,12 +2,18 @@
     "name": "svelte-feather",
     "description": "Feather Icons as Svelte Components",
     "author": "novacbn",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "keywords": [
         "svelte",
         "svelte-components"
     ],
-    "main": "lib/index.js",
+    "main": "index.js",
+    "type": "module",
+    "exports": {
+        "./package.json": "./package.json",
+        ".": "./index.js",
+        "./components/*": "./components/*"
+    },
     "engines": {
         "node": ">=12.0.0"
     },
@@ -16,17 +22,17 @@
         "url": "https://github.com/novacbn/svelte-feather"
     },
     "scripts": {
-        "build:icons": "npm run script:icons;npm run prettify:icons",
-        "link:package": "npm link",
-        "prettify:icons": "prettier ./lib/components/*.svelte --write",
-        "script:icons": "node ./scripts/build_icons.js",
-        "prebuild:clean": "rimraf ./dist"
+        "build:icons": "npm run build:icons:generate;npm run build:icons:webcomponents",
+        "build:icons:generate": "node ./scripts/build-icons.js",
+        "build:icons:webcomponents": "node ./scripts/build-webcomponents.js",
+        "prebuild:clean": "rimraf ./dist/;rimraf ./components"
     },
-    "dependencies": {},
     "devDependencies": {
-        "feather-icons": "^4.26.0",
+        "esbuild": "^0.9.6",
+        "esbuild-svelte": "^0.4.3",
+        "feather-icons": "^4.28.0",
         "prettier": "^1.14.3",
-        "prettier-plugin-svelte": "^1.1.0",
+        "rimraf": "^3.0.2",
         "svelte": "^3.22.3"
     }
 }

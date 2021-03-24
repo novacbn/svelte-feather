@@ -1,11 +1,16 @@
-const {join} = require("path");
+import {join} from "path";
+import {cwd} from "process";
 
-const PATH_WORKSPACE = {
-    components: join(process.cwd(), "lib", "components"),
-    manifest: join(process.cwd(), "docs", "src", "icons.js"),
-    module: join(process.cwd(), "lib", "components", "index.js")
-};
+const PATH_CWD = cwd();
 
-module.exports = {
-    PATH_WORKSPACE
+export const PATH_WORKSPACE = {
+    components: join(PATH_CWD, "components"),
+
+    entry: join(PATH_CWD, "components", "webcomponents.js"),
+    module: join(PATH_CWD, "components", "index.js"),
+
+    manifest: join(PATH_CWD, "docs", "src", "icons.js"),
+
+    webcomponents: join(PATH_CWD, "dist", "svelte-feather.webcomponents.js"),
+    webcomponents_min: join(PATH_CWD, "dist", "svelte-feather.webcomponents.min.js")
 };
