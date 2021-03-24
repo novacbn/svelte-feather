@@ -1,0 +1,1 @@
+export {default as Wifi} from "./Wifi.svelte";

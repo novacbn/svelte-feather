@@ -1,0 +1,1 @@
+export {default as PhoneOff} from "./PhoneOff.svelte";

@@ -1,0 +1,1 @@
+export {default as ThumbsDown} from "./ThumbsDown.svelte";

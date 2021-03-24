@@ -1,0 +1,1 @@
+export {default as MinusSquare} from "./MinusSquare.svelte";

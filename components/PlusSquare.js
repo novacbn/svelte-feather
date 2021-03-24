@@ -1,0 +1,1 @@
+export {default as PlusSquare} from "./PlusSquare.svelte";

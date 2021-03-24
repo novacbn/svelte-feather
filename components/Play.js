@@ -1,0 +1,1 @@
+export {default as Play} from "./Play.svelte";

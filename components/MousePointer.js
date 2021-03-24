@@ -1,0 +1,1 @@
+export {default as MousePointer} from "./MousePointer.svelte";

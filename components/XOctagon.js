@@ -1,0 +1,1 @@
+export {default as XOctagon} from "./XOctagon.svelte";

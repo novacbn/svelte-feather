@@ -1,0 +1,1 @@
+export {default as Share2} from "./Share2.svelte";

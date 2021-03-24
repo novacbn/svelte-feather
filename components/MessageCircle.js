@@ -1,0 +1,1 @@
+export {default as MessageCircle} from "./MessageCircle.svelte";

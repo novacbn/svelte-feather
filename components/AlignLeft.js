@@ -1,0 +1,1 @@
+export {default as AlignLeft} from "./AlignLeft.svelte";

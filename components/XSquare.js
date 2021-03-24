@@ -1,0 +1,1 @@
+export {default as XSquare} from "./XSquare.svelte";

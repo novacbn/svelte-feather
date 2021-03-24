@@ -1,0 +1,1 @@
+export {default as ArrowDownLeft} from "./ArrowDownLeft.svelte";

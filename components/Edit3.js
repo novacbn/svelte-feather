@@ -1,0 +1,1 @@
+export {default as Edit3} from "./Edit3.svelte";

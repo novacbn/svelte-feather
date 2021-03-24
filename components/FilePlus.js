@@ -1,0 +1,1 @@
+export {default as FilePlus} from "./FilePlus.svelte";

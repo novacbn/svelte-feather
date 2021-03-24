@@ -1,0 +1,1 @@
+export {default as ShieldOff} from "./ShieldOff.svelte";

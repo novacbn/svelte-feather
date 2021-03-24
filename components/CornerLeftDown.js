@@ -1,0 +1,1 @@
+export {default as CornerLeftDown} from "./CornerLeftDown.svelte";

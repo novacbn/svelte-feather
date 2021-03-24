@@ -1,0 +1,1 @@
+export {default as MessageSquare} from "./MessageSquare.svelte";

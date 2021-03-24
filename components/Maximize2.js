@@ -1,0 +1,1 @@
+export {default as Maximize2} from "./Maximize2.svelte";

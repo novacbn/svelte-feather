@@ -1,0 +1,1 @@
+export {default as BookOpen} from "./BookOpen.svelte";

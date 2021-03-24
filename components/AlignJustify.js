@@ -1,0 +1,1 @@
+export {default as AlignJustify} from "./AlignJustify.svelte";

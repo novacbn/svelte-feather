@@ -1,0 +1,1 @@
+export {default as Meh} from "./Meh.svelte";

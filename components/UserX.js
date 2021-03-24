@@ -1,0 +1,1 @@
+export {default as UserX} from "./UserX.svelte";

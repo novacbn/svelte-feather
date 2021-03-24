@@ -1,0 +1,1 @@
+export {default as PhoneIncoming} from "./PhoneIncoming.svelte";

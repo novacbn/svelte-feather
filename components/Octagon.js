@@ -1,0 +1,1 @@
+export {default as Octagon} from "./Octagon.svelte";

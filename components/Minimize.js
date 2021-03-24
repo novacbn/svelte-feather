@@ -1,0 +1,1 @@
+export {default as Minimize} from "./Minimize.svelte";

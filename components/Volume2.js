@@ -1,0 +1,1 @@
+export {default as Volume2} from "./Volume2.svelte";

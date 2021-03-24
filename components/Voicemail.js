@@ -1,0 +1,1 @@
+export {default as Voicemail} from "./Voicemail.svelte";

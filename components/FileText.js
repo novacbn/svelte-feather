@@ -1,0 +1,1 @@
+export {default as FileText} from "./FileText.svelte";

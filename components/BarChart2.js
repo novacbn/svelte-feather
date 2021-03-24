@@ -1,0 +1,1 @@
+export {default as BarChart2} from "./BarChart2.svelte";
