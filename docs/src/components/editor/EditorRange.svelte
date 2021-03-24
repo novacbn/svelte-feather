@@ -1,11 +1,13 @@
 <script>
     export let name = "";
     export let label = "";
-    export let index = "2";
     export let value = "";
     export let values = [];
 
     function on_range_input(event) {
+        if (!event.isTrusted) return;
+
+        const {value: index} = event.target;
         value = values[index];
     }
 
@@ -24,11 +26,12 @@
             max={steps.length - 1}
             step="1"
             {name}
-            bind:value={index}
-            on:input={on_range_input} />
+            value={values.indexOf(value)}
+            on:input={on_range_input}
+        />
 
         <datalist id={list_name}>
-            {#each steps as _, index}
+            {#each steps as _, index (index)}
                 <option value={index} />
             {/each}
         </datalist>

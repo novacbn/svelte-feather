@@ -3,6 +3,18 @@
     export let value = "black";
 </script>
 
+<label>{label}</label>
+
+<div class="row">
+    <div class="col-8">
+        <input type="text" bind:value />
+    </div>
+
+    <div class="col">
+        <input type="color" bind:value />
+    </div>
+</div>
+
 <style>
     input[type="color"] {
         display: block;
@@ -18,15 +30,3 @@
         transition: all 0.2s ease;
     }
 </style>
-
-<label>{label}</label>
-
-<div class="row">
-    <div class="col-8">
-        <input type="text" bind:value />
-    </div>
-
-    <div class="col">
-        <input type="color" bind:value />
-    </div>
-</div>

@@ -1,3 +1,4 @@
+import {ICON_SIZES} from "svelte-feather";
 import {Icons} from "svelte-feather/components";
 
 export const ICON_DEFAULTS = {
@@ -5,7 +6,7 @@ export const ICON_DEFAULTS = {
     fill: "none",
     linecap: "round",
     linejoin: "round",
-    size: feather.ICON_SIZES.default,
+    size: ICON_SIZES.large,
     width: "2px"
 };
 
@@ -13,79 +14,79 @@ export const ICON_MAP = Icons;
 
 export const ICON_MANIFEST = [
     {
-        component: feather.Activity,
+        component: Icons.Activity,
         class_name: "Activity",
         display_name: "Activity",
         name: "activity",
-        tags: ["pulse","health","action","motion"]
+        tags: ["pulse", "health", "action", "motion"]
     },
 
     {
-        component: feather.Airplay,
+        component: Icons.Airplay,
         class_name: "Airplay",
         display_name: "Airplay",
         name: "airplay",
-        tags: ["stream","cast","mirroring"]
+        tags: ["stream", "cast", "mirroring"]
     },
 
     {
-        component: feather.AlertCircle,
+        component: Icons.AlertCircle,
         class_name: "AlertCircle",
         display_name: "Alert Circle",
         name: "alert-circle",
-        tags: ["warning","alert","danger"]
+        tags: ["warning", "alert", "danger"]
     },
 
     {
-        component: feather.AlertOctagon,
+        component: Icons.AlertOctagon,
         class_name: "AlertOctagon",
         display_name: "Alert Octagon",
         name: "alert-octagon",
-        tags: ["warning","alert","danger"]
+        tags: ["warning", "alert", "danger"]
     },
 
     {
-        component: feather.AlertTriangle,
+        component: Icons.AlertTriangle,
         class_name: "AlertTriangle",
         display_name: "Alert Triangle",
         name: "alert-triangle",
-        tags: ["warning","alert","danger"]
+        tags: ["warning", "alert", "danger"]
     },
 
     {
-        component: feather.AlignCenter,
+        component: Icons.AlignCenter,
         class_name: "AlignCenter",
         display_name: "Align Center",
         name: "align-center",
-        tags: ["text alignment","center"]
+        tags: ["text alignment", "center"]
     },
 
     {
-        component: feather.AlignJustify,
+        component: Icons.AlignJustify,
         class_name: "AlignJustify",
         display_name: "Align Justify",
         name: "align-justify",
-        tags: ["text alignment","justified"]
+        tags: ["text alignment", "justified"]
     },
 
     {
-        component: feather.AlignLeft,
+        component: Icons.AlignLeft,
         class_name: "AlignLeft",
         display_name: "Align Left",
         name: "align-left",
-        tags: ["text alignment","left"]
+        tags: ["text alignment", "left"]
     },
 
     {
-        component: feather.AlignRight,
+        component: Icons.AlignRight,
         class_name: "AlignRight",
         display_name: "Align Right",
         name: "align-right",
-        tags: ["text alignment","right"]
+        tags: ["text alignment", "right"]
     },
 
     {
-        component: feather.Anchor,
+        component: Icons.Anchor,
         class_name: "Anchor",
         display_name: "Anchor",
         name: "anchor",
@@ -93,23 +94,23 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.Aperture,
+        component: Icons.Aperture,
         class_name: "Aperture",
         display_name: "Aperture",
         name: "aperture",
-        tags: ["camera","photo"]
+        tags: ["camera", "photo"]
     },
 
     {
-        component: feather.Archive,
+        component: Icons.Archive,
         class_name: "Archive",
         display_name: "Archive",
         name: "archive",
-        tags: ["index","box"]
+        tags: ["index", "box"]
     },
 
     {
-        component: feather.ArrowDownCircle,
+        component: Icons.ArrowDownCircle,
         class_name: "ArrowDownCircle",
         display_name: "Arrow Down Circle",
         name: "arrow-down-circle",
@@ -117,7 +118,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.ArrowDownLeft,
+        component: Icons.ArrowDownLeft,
         class_name: "ArrowDownLeft",
         display_name: "Arrow Down Left",
         name: "arrow-down-left",
@@ -125,7 +126,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.ArrowDownRight,
+        component: Icons.ArrowDownRight,
         class_name: "ArrowDownRight",
         display_name: "Arrow Down Right",
         name: "arrow-down-right",
@@ -133,7 +134,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.ArrowDown,
+        component: Icons.ArrowDown,
         class_name: "ArrowDown",
         display_name: "Arrow Down",
         name: "arrow-down",
@@ -141,7 +142,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.ArrowLeftCircle,
+        component: Icons.ArrowLeftCircle,
         class_name: "ArrowLeftCircle",
         display_name: "Arrow Left Circle",
         name: "arrow-left-circle",
@@ -149,7 +150,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.ArrowLeft,
+        component: Icons.ArrowLeft,
         class_name: "ArrowLeft",
         display_name: "Arrow Left",
         name: "arrow-left",
@@ -157,7 +158,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.ArrowRightCircle,
+        component: Icons.ArrowRightCircle,
         class_name: "ArrowRightCircle",
         display_name: "Arrow Right Circle",
         name: "arrow-right-circle",
@@ -165,7 +166,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.ArrowRight,
+        component: Icons.ArrowRight,
         class_name: "ArrowRight",
         display_name: "Arrow Right",
         name: "arrow-right",
@@ -173,7 +174,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.ArrowUpCircle,
+        component: Icons.ArrowUpCircle,
         class_name: "ArrowUpCircle",
         display_name: "Arrow Up Circle",
         name: "arrow-up-circle",
@@ -181,7 +182,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.ArrowUpLeft,
+        component: Icons.ArrowUpLeft,
         class_name: "ArrowUpLeft",
         display_name: "Arrow Up Left",
         name: "arrow-up-left",
@@ -189,7 +190,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.ArrowUpRight,
+        component: Icons.ArrowUpRight,
         class_name: "ArrowUpRight",
         display_name: "Arrow Up Right",
         name: "arrow-up-right",
@@ -197,7 +198,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.ArrowUp,
+        component: Icons.ArrowUp,
         class_name: "ArrowUp",
         display_name: "Arrow Up",
         name: "arrow-up",
@@ -205,71 +206,71 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.AtSign,
+        component: Icons.AtSign,
         class_name: "AtSign",
         display_name: "At Sign",
         name: "at-sign",
-        tags: ["mention","at","email","message"]
+        tags: ["mention", "at", "email", "message"]
     },
 
     {
-        component: feather.Award,
+        component: Icons.Award,
         class_name: "Award",
         display_name: "Award",
         name: "award",
-        tags: ["achievement","badge"]
+        tags: ["achievement", "badge"]
     },
 
     {
-        component: feather.BarChart2,
+        component: Icons.BarChart2,
         class_name: "BarChart2",
         display_name: "Bar Chart 2",
         name: "bar-chart-2",
-        tags: ["statistics","diagram","graph"]
+        tags: ["statistics", "diagram", "graph"]
     },
 
     {
-        component: feather.BarChart,
+        component: Icons.BarChart,
         class_name: "BarChart",
         display_name: "Bar Chart",
         name: "bar-chart",
-        tags: ["statistics","diagram","graph"]
+        tags: ["statistics", "diagram", "graph"]
     },
 
     {
-        component: feather.BatteryCharging,
+        component: Icons.BatteryCharging,
         class_name: "BatteryCharging",
         display_name: "Battery Charging",
         name: "battery-charging",
-        tags: ["power","electricity"]
+        tags: ["power", "electricity"]
     },
 
     {
-        component: feather.Battery,
+        component: Icons.Battery,
         class_name: "Battery",
         display_name: "Battery",
         name: "battery",
-        tags: ["power","electricity"]
+        tags: ["power", "electricity"]
     },
 
     {
-        component: feather.BellOff,
+        component: Icons.BellOff,
         class_name: "BellOff",
         display_name: "Bell Off",
         name: "bell-off",
-        tags: ["alarm","notification","silent"]
+        tags: ["alarm", "notification", "silent"]
     },
 
     {
-        component: feather.Bell,
+        component: Icons.Bell,
         class_name: "Bell",
         display_name: "Bell",
         name: "bell",
-        tags: ["alarm","notification","sound"]
+        tags: ["alarm", "notification", "sound"]
     },
 
     {
-        component: feather.Bluetooth,
+        component: Icons.Bluetooth,
         class_name: "Bluetooth",
         display_name: "Bluetooth",
         name: "bluetooth",
@@ -277,7 +278,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.Bold,
+        component: Icons.Bold,
         class_name: "Bold",
         display_name: "Bold",
         name: "bold",
@@ -285,31 +286,31 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.BookOpen,
+        component: Icons.BookOpen,
         class_name: "BookOpen",
         display_name: "Book Open",
         name: "book-open",
-        tags: ["read","library"]
+        tags: ["read", "library"]
     },
 
     {
-        component: feather.Book,
+        component: Icons.Book,
         class_name: "Book",
         display_name: "Book",
         name: "book",
-        tags: ["read","dictionary","booklet","magazine","library"]
+        tags: ["read", "dictionary", "booklet", "magazine", "library"]
     },
 
     {
-        component: feather.Bookmark,
+        component: Icons.Bookmark,
         class_name: "Bookmark",
         display_name: "Bookmark",
         name: "bookmark",
-        tags: ["read","clip","marker","tag"]
+        tags: ["read", "clip", "marker", "tag"]
     },
 
     {
-        component: feather.Box,
+        component: Icons.Box,
         class_name: "Box",
         display_name: "Box",
         name: "box",
@@ -317,15 +318,15 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.Briefcase,
+        component: Icons.Briefcase,
         class_name: "Briefcase",
         display_name: "Briefcase",
         name: "briefcase",
-        tags: ["work","bag","baggage","folder"]
+        tags: ["work", "bag", "baggage", "folder"]
     },
 
     {
-        component: feather.Calendar,
+        component: Icons.Calendar,
         class_name: "Calendar",
         display_name: "Calendar",
         name: "calendar",
@@ -333,7 +334,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.CameraOff,
+        component: Icons.CameraOff,
         class_name: "CameraOff",
         display_name: "Camera Off",
         name: "camera-off",
@@ -341,7 +342,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.Camera,
+        component: Icons.Camera,
         class_name: "Camera",
         display_name: "Camera",
         name: "camera",
@@ -349,15 +350,15 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.Cast,
+        component: Icons.Cast,
         class_name: "Cast",
         display_name: "Cast",
         name: "cast",
-        tags: ["chromecast","airplay"]
+        tags: ["chromecast", "airplay"]
     },
 
     {
-        component: feather.CheckCircle,
+        component: Icons.CheckCircle,
         class_name: "CheckCircle",
         display_name: "Check Circle",
         name: "check-circle",
@@ -365,7 +366,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.CheckSquare,
+        component: Icons.CheckSquare,
         class_name: "CheckSquare",
         display_name: "Check Square",
         name: "check-square",
@@ -373,7 +374,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.Check,
+        component: Icons.Check,
         class_name: "Check",
         display_name: "Check",
         name: "check",
@@ -381,7 +382,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.ChevronDown,
+        component: Icons.ChevronDown,
         class_name: "ChevronDown",
         display_name: "Chevron Down",
         name: "chevron-down",
@@ -389,7 +390,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.ChevronLeft,
+        component: Icons.ChevronLeft,
         class_name: "ChevronLeft",
         display_name: "Chevron Left",
         name: "chevron-left",
@@ -397,7 +398,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.ChevronRight,
+        component: Icons.ChevronRight,
         class_name: "ChevronRight",
         display_name: "Chevron Right",
         name: "chevron-right",
@@ -405,7 +406,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.ChevronUp,
+        component: Icons.ChevronUp,
         class_name: "ChevronUp",
         display_name: "Chevron Up",
         name: "chevron-up",
@@ -413,7 +414,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.ChevronsDown,
+        component: Icons.ChevronsDown,
         class_name: "ChevronsDown",
         display_name: "Chevrons Down",
         name: "chevrons-down",
@@ -421,7 +422,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.ChevronsLeft,
+        component: Icons.ChevronsLeft,
         class_name: "ChevronsLeft",
         display_name: "Chevrons Left",
         name: "chevrons-left",
@@ -429,7 +430,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.ChevronsRight,
+        component: Icons.ChevronsRight,
         class_name: "ChevronsRight",
         display_name: "Chevrons Right",
         name: "chevrons-right",
@@ -437,7 +438,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.ChevronsUp,
+        component: Icons.ChevronsUp,
         class_name: "ChevronsUp",
         display_name: "Chevrons Up",
         name: "chevrons-up",
@@ -445,7 +446,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.Chrome,
+        component: Icons.Chrome,
         class_name: "Chrome",
         display_name: "Chrome",
         name: "chrome",
@@ -453,15 +454,15 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.Circle,
+        component: Icons.Circle,
         class_name: "Circle",
         display_name: "Circle",
         name: "circle",
-        tags: ["off","zero","record"]
+        tags: ["off", "zero", "record"]
     },
 
     {
-        component: feather.Clipboard,
+        component: Icons.Clipboard,
         class_name: "Clipboard",
         display_name: "Clipboard",
         name: "clipboard",
@@ -469,31 +470,31 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.Clock,
+        component: Icons.Clock,
         class_name: "Clock",
         display_name: "Clock",
         name: "clock",
-        tags: ["time","watch","alarm"]
+        tags: ["time", "watch", "alarm"]
     },
 
     {
-        component: feather.CloudDrizzle,
+        component: Icons.CloudDrizzle,
         class_name: "CloudDrizzle",
         display_name: "Cloud Drizzle",
         name: "cloud-drizzle",
-        tags: ["weather","shower"]
+        tags: ["weather", "shower"]
     },
 
     {
-        component: feather.CloudLightning,
+        component: Icons.CloudLightning,
         class_name: "CloudLightning",
         display_name: "Cloud Lightning",
         name: "cloud-lightning",
-        tags: ["weather","bolt"]
+        tags: ["weather", "bolt"]
     },
 
     {
-        component: feather.CloudOff,
+        component: Icons.CloudOff,
         class_name: "CloudOff",
         display_name: "Cloud Off",
         name: "cloud-off",
@@ -501,7 +502,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.CloudRain,
+        component: Icons.CloudRain,
         class_name: "CloudRain",
         display_name: "Cloud Rain",
         name: "cloud-rain",
@@ -509,15 +510,15 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.CloudSnow,
+        component: Icons.CloudSnow,
         class_name: "CloudSnow",
         display_name: "Cloud Snow",
         name: "cloud-snow",
-        tags: ["weather","blizzard"]
+        tags: ["weather", "blizzard"]
     },
 
     {
-        component: feather.Cloud,
+        component: Icons.Cloud,
         class_name: "Cloud",
         display_name: "Cloud",
         name: "cloud",
@@ -525,15 +526,15 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.Code,
+        component: Icons.Code,
         class_name: "Code",
         display_name: "Code",
         name: "code",
-        tags: ["source","programming"]
+        tags: ["source", "programming"]
     },
 
     {
-        component: feather.Codepen,
+        component: Icons.Codepen,
         class_name: "Codepen",
         display_name: "Codepen",
         name: "codepen",
@@ -541,7 +542,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.Codesandbox,
+        component: Icons.Codesandbox,
         class_name: "Codesandbox",
         display_name: "Codesandbox",
         name: "codesandbox",
@@ -549,15 +550,15 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.Coffee,
+        component: Icons.Coffee,
         class_name: "Coffee",
         display_name: "Coffee",
         name: "coffee",
-        tags: ["drink","cup","mug","tea","cafe","hot","beverage"]
+        tags: ["drink", "cup", "mug", "tea", "cafe", "hot", "beverage"]
     },
 
     {
-        component: feather.Columns,
+        component: Icons.Columns,
         class_name: "Columns",
         display_name: "Columns",
         name: "columns",
@@ -565,39 +566,39 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.Command,
+        component: Icons.Command,
         class_name: "Command",
         display_name: "Command",
         name: "command",
-        tags: ["keyboard","cmd","terminal","prompt"]
+        tags: ["keyboard", "cmd", "terminal", "prompt"]
     },
 
     {
-        component: feather.Compass,
+        component: Icons.Compass,
         class_name: "Compass",
         display_name: "Compass",
         name: "compass",
-        tags: ["navigation","safari","travel","direction"]
+        tags: ["navigation", "safari", "travel", "direction"]
     },
 
     {
-        component: feather.Copy,
+        component: Icons.Copy,
         class_name: "Copy",
         display_name: "Copy",
         name: "copy",
-        tags: ["clone","duplicate"]
+        tags: ["clone", "duplicate"]
     },
 
     {
-        component: feather.CornerDownLeft,
+        component: Icons.CornerDownLeft,
         class_name: "CornerDownLeft",
         display_name: "Corner Down Left",
         name: "corner-down-left",
-        tags: ["arrow","return"]
+        tags: ["arrow", "return"]
     },
 
     {
-        component: feather.CornerDownRight,
+        component: Icons.CornerDownRight,
         class_name: "CornerDownRight",
         display_name: "Corner Down Right",
         name: "corner-down-right",
@@ -605,7 +606,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.CornerLeftDown,
+        component: Icons.CornerLeftDown,
         class_name: "CornerLeftDown",
         display_name: "Corner Left Down",
         name: "corner-left-down",
@@ -613,7 +614,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.CornerLeftUp,
+        component: Icons.CornerLeftUp,
         class_name: "CornerLeftUp",
         display_name: "Corner Left Up",
         name: "corner-left-up",
@@ -621,7 +622,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.CornerRightDown,
+        component: Icons.CornerRightDown,
         class_name: "CornerRightDown",
         display_name: "Corner Right Down",
         name: "corner-right-down",
@@ -629,7 +630,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.CornerRightUp,
+        component: Icons.CornerRightUp,
         class_name: "CornerRightUp",
         display_name: "Corner Right Up",
         name: "corner-right-up",
@@ -637,7 +638,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.CornerUpLeft,
+        component: Icons.CornerUpLeft,
         class_name: "CornerUpLeft",
         display_name: "Corner Up Left",
         name: "corner-up-left",
@@ -645,7 +646,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.CornerUpRight,
+        component: Icons.CornerUpRight,
         class_name: "CornerUpRight",
         display_name: "Corner Up Right",
         name: "corner-up-right",
@@ -653,47 +654,47 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.Cpu,
+        component: Icons.Cpu,
         class_name: "Cpu",
         display_name: "Cpu",
         name: "cpu",
-        tags: ["processor","technology"]
+        tags: ["processor", "technology"]
     },
 
     {
-        component: feather.CreditCard,
+        component: Icons.CreditCard,
         class_name: "CreditCard",
         display_name: "Credit Card",
         name: "credit-card",
-        tags: ["purchase","payment","cc"]
+        tags: ["purchase", "payment", "cc"]
     },
 
     {
-        component: feather.Crop,
+        component: Icons.Crop,
         class_name: "Crop",
         display_name: "Crop",
         name: "crop",
-        tags: ["photo","image"]
+        tags: ["photo", "image"]
     },
 
     {
-        component: feather.Crosshair,
+        component: Icons.Crosshair,
         class_name: "Crosshair",
         display_name: "Crosshair",
         name: "crosshair",
-        tags: ["aim","target"]
+        tags: ["aim", "target"]
     },
 
     {
-        component: feather.Database,
+        component: Icons.Database,
         class_name: "Database",
         display_name: "Database",
         name: "database",
-        tags: ["storage","memory"]
+        tags: ["storage", "memory"]
     },
 
     {
-        component: feather.Delete,
+        component: Icons.Delete,
         class_name: "Delete",
         display_name: "Delete",
         name: "delete",
@@ -701,15 +702,15 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.Disc,
+        component: Icons.Disc,
         class_name: "Disc",
         display_name: "Disc",
         name: "disc",
-        tags: ["album","cd","dvd","music"]
+        tags: ["album", "cd", "dvd", "music"]
     },
 
     {
-        component: feather.DivideCircle,
+        component: Icons.DivideCircle,
         class_name: "DivideCircle",
         display_name: "Divide Circle",
         name: "divide-circle",
@@ -717,7 +718,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.DivideSquare,
+        component: Icons.DivideSquare,
         class_name: "DivideSquare",
         display_name: "Divide Square",
         name: "divide-square",
@@ -725,7 +726,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.Divide,
+        component: Icons.Divide,
         class_name: "Divide",
         display_name: "Divide",
         name: "divide",
@@ -733,15 +734,15 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.DollarSign,
+        component: Icons.DollarSign,
         class_name: "DollarSign",
         display_name: "Dollar Sign",
         name: "dollar-sign",
-        tags: ["currency","money","payment"]
+        tags: ["currency", "money", "payment"]
     },
 
     {
-        component: feather.DownloadCloud,
+        component: Icons.DownloadCloud,
         class_name: "DownloadCloud",
         display_name: "Download Cloud",
         name: "download-cloud",
@@ -749,7 +750,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.Download,
+        component: Icons.Download,
         class_name: "Download",
         display_name: "Download",
         name: "download",
@@ -757,7 +758,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.Dribbble,
+        component: Icons.Dribbble,
         class_name: "Dribbble",
         display_name: "Dribbble",
         name: "dribbble",
@@ -765,7 +766,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.Droplet,
+        component: Icons.Droplet,
         class_name: "Droplet",
         display_name: "Droplet",
         name: "droplet",
@@ -773,31 +774,31 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.Edit2,
+        component: Icons.Edit2,
         class_name: "Edit2",
         display_name: "Edit 2",
         name: "edit-2",
-        tags: ["pencil","change"]
+        tags: ["pencil", "change"]
     },
 
     {
-        component: feather.Edit3,
+        component: Icons.Edit3,
         class_name: "Edit3",
         display_name: "Edit 3",
         name: "edit-3",
-        tags: ["pencil","change"]
+        tags: ["pencil", "change"]
     },
 
     {
-        component: feather.Edit,
+        component: Icons.Edit,
         class_name: "Edit",
         display_name: "Edit",
         name: "edit",
-        tags: ["pencil","change"]
+        tags: ["pencil", "change"]
     },
 
     {
-        component: feather.ExternalLink,
+        component: Icons.ExternalLink,
         class_name: "ExternalLink",
         display_name: "External Link",
         name: "external-link",
@@ -805,31 +806,31 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.EyeOff,
+        component: Icons.EyeOff,
         class_name: "EyeOff",
         display_name: "Eye Off",
         name: "eye-off",
-        tags: ["view","watch","hide","hidden"]
+        tags: ["view", "watch", "hide", "hidden"]
     },
 
     {
-        component: feather.Eye,
+        component: Icons.Eye,
         class_name: "Eye",
         display_name: "Eye",
         name: "eye",
-        tags: ["view","watch"]
+        tags: ["view", "watch"]
     },
 
     {
-        component: feather.Facebook,
+        component: Icons.Facebook,
         class_name: "Facebook",
         display_name: "Facebook",
         name: "facebook",
-        tags: ["logo","social"]
+        tags: ["logo", "social"]
     },
 
     {
-        component: feather.FastForward,
+        component: Icons.FastForward,
         class_name: "FastForward",
         display_name: "Fast Forward",
         name: "fast-forward",
@@ -837,7 +838,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.Feather,
+        component: Icons.Feather,
         class_name: "Feather",
         display_name: "Feather",
         name: "feather",
@@ -845,39 +846,39 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.Figma,
+        component: Icons.Figma,
         class_name: "Figma",
         display_name: "Figma",
         name: "figma",
-        tags: ["logo","design","tool"]
+        tags: ["logo", "design", "tool"]
     },
 
     {
-        component: feather.FileMinus,
+        component: Icons.FileMinus,
         class_name: "FileMinus",
         display_name: "File Minus",
         name: "file-minus",
-        tags: ["delete","remove","erase"]
+        tags: ["delete", "remove", "erase"]
     },
 
     {
-        component: feather.FilePlus,
+        component: Icons.FilePlus,
         class_name: "FilePlus",
         display_name: "File Plus",
         name: "file-plus",
-        tags: ["add","create","new"]
+        tags: ["add", "create", "new"]
     },
 
     {
-        component: feather.FileText,
+        component: Icons.FileText,
         class_name: "FileText",
         display_name: "File Text",
         name: "file-text",
-        tags: ["data","txt","pdf"]
+        tags: ["data", "txt", "pdf"]
     },
 
     {
-        component: feather.File,
+        component: Icons.File,
         class_name: "File",
         display_name: "File",
         name: "file",
@@ -885,23 +886,23 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.Film,
+        component: Icons.Film,
         class_name: "Film",
         display_name: "Film",
         name: "film",
-        tags: ["movie","video"]
+        tags: ["movie", "video"]
     },
 
     {
-        component: feather.Filter,
+        component: Icons.Filter,
         class_name: "Filter",
         display_name: "Filter",
         name: "filter",
-        tags: ["funnel","hopper"]
+        tags: ["funnel", "hopper"]
     },
 
     {
-        component: feather.Flag,
+        component: Icons.Flag,
         class_name: "Flag",
         display_name: "Flag",
         name: "flag",
@@ -909,7 +910,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.FolderMinus,
+        component: Icons.FolderMinus,
         class_name: "FolderMinus",
         display_name: "Folder Minus",
         name: "folder-minus",
@@ -917,7 +918,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.FolderPlus,
+        component: Icons.FolderPlus,
         class_name: "FolderPlus",
         display_name: "Folder Plus",
         name: "folder-plus",
@@ -925,7 +926,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.Folder,
+        component: Icons.Folder,
         class_name: "Folder",
         display_name: "Folder",
         name: "folder",
@@ -933,87 +934,87 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.Framer,
+        component: Icons.Framer,
         class_name: "Framer",
         display_name: "Framer",
         name: "framer",
-        tags: ["logo","design","tool"]
+        tags: ["logo", "design", "tool"]
     },
 
     {
-        component: feather.Frown,
+        component: Icons.Frown,
         class_name: "Frown",
         display_name: "Frown",
         name: "frown",
-        tags: ["emoji","face","bad","sad","emotion"]
+        tags: ["emoji", "face", "bad", "sad", "emotion"]
     },
 
     {
-        component: feather.Gift,
+        component: Icons.Gift,
         class_name: "Gift",
         display_name: "Gift",
         name: "gift",
-        tags: ["present","box","birthday","party"]
+        tags: ["present", "box", "birthday", "party"]
     },
 
     {
-        component: feather.GitBranch,
+        component: Icons.GitBranch,
         class_name: "GitBranch",
         display_name: "Git Branch",
         name: "git-branch",
-        tags: ["code","version control"]
+        tags: ["code", "version control"]
     },
 
     {
-        component: feather.GitCommit,
+        component: Icons.GitCommit,
         class_name: "GitCommit",
         display_name: "Git Commit",
         name: "git-commit",
-        tags: ["code","version control"]
+        tags: ["code", "version control"]
     },
 
     {
-        component: feather.GitMerge,
+        component: Icons.GitMerge,
         class_name: "GitMerge",
         display_name: "Git Merge",
         name: "git-merge",
-        tags: ["code","version control"]
+        tags: ["code", "version control"]
     },
 
     {
-        component: feather.GitPullRequest,
+        component: Icons.GitPullRequest,
         class_name: "GitPullRequest",
         display_name: "Git Pull Request",
         name: "git-pull-request",
-        tags: ["code","version control"]
+        tags: ["code", "version control"]
     },
 
     {
-        component: feather.Github,
+        component: Icons.Github,
         class_name: "Github",
         display_name: "Github",
         name: "github",
-        tags: ["logo","version control"]
+        tags: ["logo", "version control"]
     },
 
     {
-        component: feather.Gitlab,
+        component: Icons.Gitlab,
         class_name: "Gitlab",
         display_name: "Gitlab",
         name: "gitlab",
-        tags: ["logo","version control"]
+        tags: ["logo", "version control"]
     },
 
     {
-        component: feather.Globe,
+        component: Icons.Globe,
         class_name: "Globe",
         display_name: "Globe",
         name: "globe",
-        tags: ["world","browser","language","translate"]
+        tags: ["world", "browser", "language", "translate"]
     },
 
     {
-        component: feather.Grid,
+        component: Icons.Grid,
         class_name: "Grid",
         display_name: "Grid",
         name: "grid",
@@ -1021,39 +1022,39 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.HardDrive,
+        component: Icons.HardDrive,
         class_name: "HardDrive",
         display_name: "Hard Drive",
         name: "hard-drive",
-        tags: ["computer","server","memory","data"]
+        tags: ["computer", "server", "memory", "data"]
     },
 
     {
-        component: feather.Hash,
+        component: Icons.Hash,
         class_name: "Hash",
         display_name: "Hash",
         name: "hash",
-        tags: ["hashtag","number","pound"]
+        tags: ["hashtag", "number", "pound"]
     },
 
     {
-        component: feather.Headphones,
+        component: Icons.Headphones,
         class_name: "Headphones",
         display_name: "Headphones",
         name: "headphones",
-        tags: ["music","audio","sound"]
+        tags: ["music", "audio", "sound"]
     },
 
     {
-        component: feather.Heart,
+        component: Icons.Heart,
         class_name: "Heart",
         display_name: "Heart",
         name: "heart",
-        tags: ["like","love","emotion"]
+        tags: ["like", "love", "emotion"]
     },
 
     {
-        component: feather.HelpCircle,
+        component: Icons.HelpCircle,
         class_name: "HelpCircle",
         display_name: "Help Circle",
         name: "help-circle",
@@ -1061,23 +1062,23 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.Hexagon,
+        component: Icons.Hexagon,
         class_name: "Hexagon",
         display_name: "Hexagon",
         name: "hexagon",
-        tags: ["shape","node.js","logo"]
+        tags: ["shape", "node.js", "logo"]
     },
 
     {
-        component: feather.Home,
+        component: Icons.Home,
         class_name: "Home",
         display_name: "Home",
         name: "home",
-        tags: ["house","living"]
+        tags: ["house", "living"]
     },
 
     {
-        component: feather.Image,
+        component: Icons.Image,
         class_name: "Image",
         display_name: "Image",
         name: "image",
@@ -1085,7 +1086,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.Inbox,
+        component: Icons.Inbox,
         class_name: "Inbox",
         display_name: "Inbox",
         name: "inbox",
@@ -1093,7 +1094,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.Info,
+        component: Icons.Info,
         class_name: "Info",
         display_name: "Info",
         name: "info",
@@ -1101,15 +1102,15 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.Instagram,
+        component: Icons.Instagram,
         class_name: "Instagram",
         display_name: "Instagram",
         name: "instagram",
-        tags: ["logo","camera"]
+        tags: ["logo", "camera"]
     },
 
     {
-        component: feather.Italic,
+        component: Icons.Italic,
         class_name: "Italic",
         display_name: "Italic",
         name: "italic",
@@ -1117,15 +1118,15 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.Key,
+        component: Icons.Key,
         class_name: "Key",
         display_name: "Key",
         name: "key",
-        tags: ["password","login","authentication","secure"]
+        tags: ["password", "login", "authentication", "secure"]
     },
 
     {
-        component: feather.Layers,
+        component: Icons.Layers,
         class_name: "Layers",
         display_name: "Layers",
         name: "layers",
@@ -1133,15 +1134,15 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.Layout,
+        component: Icons.Layout,
         class_name: "Layout",
         display_name: "Layout",
         name: "layout",
-        tags: ["window","webpage"]
+        tags: ["window", "webpage"]
     },
 
     {
-        component: feather.LifeBuoy,
+        component: Icons.LifeBuoy,
         class_name: "LifeBuoy",
         display_name: "Life Buoy",
         name: "life-buoy",
@@ -1149,31 +1150,31 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.Link2,
+        component: Icons.Link2,
         class_name: "Link2",
         display_name: "Link 2",
         name: "link-2",
-        tags: ["chain","url"]
+        tags: ["chain", "url"]
     },
 
     {
-        component: feather.Link,
+        component: Icons.Link,
         class_name: "Link",
         display_name: "Link",
         name: "link",
-        tags: ["chain","url"]
+        tags: ["chain", "url"]
     },
 
     {
-        component: feather.Linkedin,
+        component: Icons.Linkedin,
         class_name: "Linkedin",
         display_name: "Linkedin",
         name: "linkedin",
-        tags: ["logo","social media"]
+        tags: ["logo", "social media"]
     },
 
     {
-        component: feather.List,
+        component: Icons.List,
         class_name: "List",
         display_name: "List",
         name: "list",
@@ -1181,7 +1182,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.Loader,
+        component: Icons.Loader,
         class_name: "Loader",
         display_name: "Loader",
         name: "loader",
@@ -1189,63 +1190,63 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.Lock,
+        component: Icons.Lock,
         class_name: "Lock",
         display_name: "Lock",
         name: "lock",
-        tags: ["security","password","secure"]
+        tags: ["security", "password", "secure"]
     },
 
     {
-        component: feather.LogIn,
+        component: Icons.LogIn,
         class_name: "LogIn",
         display_name: "Log In",
         name: "log-in",
-        tags: ["sign in","arrow","enter"]
+        tags: ["sign in", "arrow", "enter"]
     },
 
     {
-        component: feather.LogOut,
+        component: Icons.LogOut,
         class_name: "LogOut",
         display_name: "Log Out",
         name: "log-out",
-        tags: ["sign out","arrow","exit"]
+        tags: ["sign out", "arrow", "exit"]
     },
 
     {
-        component: feather.Mail,
+        component: Icons.Mail,
         class_name: "Mail",
         display_name: "Mail",
         name: "mail",
-        tags: ["email","message"]
+        tags: ["email", "message"]
     },
 
     {
-        component: feather.MapPin,
+        component: Icons.MapPin,
         class_name: "MapPin",
         display_name: "Map Pin",
         name: "map-pin",
-        tags: ["location","navigation","travel","marker"]
+        tags: ["location", "navigation", "travel", "marker"]
     },
 
     {
-        component: feather.Map,
+        component: Icons.Map,
         class_name: "Map",
         display_name: "Map",
         name: "map",
-        tags: ["location","navigation","travel"]
+        tags: ["location", "navigation", "travel"]
     },
 
     {
-        component: feather.Maximize2,
+        component: Icons.Maximize2,
         class_name: "Maximize2",
         display_name: "Maximize 2",
         name: "maximize-2",
-        tags: ["fullscreen","arrows","expand"]
+        tags: ["fullscreen", "arrows", "expand"]
     },
 
     {
-        component: feather.Maximize,
+        component: Icons.Maximize,
         class_name: "Maximize",
         display_name: "Maximize",
         name: "maximize",
@@ -1253,71 +1254,71 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.Meh,
+        component: Icons.Meh,
         class_name: "Meh",
         display_name: "Meh",
         name: "meh",
-        tags: ["emoji","face","neutral","emotion"]
+        tags: ["emoji", "face", "neutral", "emotion"]
     },
 
     {
-        component: feather.Menu,
+        component: Icons.Menu,
         class_name: "Menu",
         display_name: "Menu",
         name: "menu",
-        tags: ["bars","navigation","hamburger"]
+        tags: ["bars", "navigation", "hamburger"]
     },
 
     {
-        component: feather.MessageCircle,
+        component: Icons.MessageCircle,
         class_name: "MessageCircle",
         display_name: "Message Circle",
         name: "message-circle",
-        tags: ["comment","chat"]
+        tags: ["comment", "chat"]
     },
 
     {
-        component: feather.MessageSquare,
+        component: Icons.MessageSquare,
         class_name: "MessageSquare",
         display_name: "Message Square",
         name: "message-square",
-        tags: ["comment","chat"]
+        tags: ["comment", "chat"]
     },
 
     {
-        component: feather.MicOff,
+        component: Icons.MicOff,
         class_name: "MicOff",
         display_name: "Mic Off",
         name: "mic-off",
-        tags: ["record","sound","mute"]
+        tags: ["record", "sound", "mute"]
     },
 
     {
-        component: feather.Mic,
+        component: Icons.Mic,
         class_name: "Mic",
         display_name: "Mic",
         name: "mic",
-        tags: ["record","sound","listen"]
+        tags: ["record", "sound", "listen"]
     },
 
     {
-        component: feather.Minimize2,
+        component: Icons.Minimize2,
         class_name: "Minimize2",
         display_name: "Minimize 2",
         name: "minimize-2",
-        tags: ["exit fullscreen","arrows","close"]
+        tags: ["exit fullscreen", "arrows", "close"]
     },
 
     {
-        component: feather.Minimize,
+        component: Icons.Minimize,
         class_name: "Minimize",
         display_name: "Minimize",
         name: "minimize",
-        tags: ["exit fullscreen","close"]
+        tags: ["exit fullscreen", "close"]
     },
 
     {
-        component: feather.MinusCircle,
+        component: Icons.MinusCircle,
         class_name: "MinusCircle",
         display_name: "Minus Circle",
         name: "minus-circle",
@@ -1325,7 +1326,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.MinusSquare,
+        component: Icons.MinusSquare,
         class_name: "MinusSquare",
         display_name: "Minus Square",
         name: "minus-square",
@@ -1333,7 +1334,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.Minus,
+        component: Icons.Minus,
         class_name: "Minus",
         display_name: "Minus",
         name: "minus",
@@ -1341,23 +1342,23 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.Monitor,
+        component: Icons.Monitor,
         class_name: "Monitor",
         display_name: "Monitor",
         name: "monitor",
-        tags: ["tv","screen","display"]
+        tags: ["tv", "screen", "display"]
     },
 
     {
-        component: feather.Moon,
+        component: Icons.Moon,
         class_name: "Moon",
         display_name: "Moon",
         name: "moon",
-        tags: ["dark","night"]
+        tags: ["dark", "night"]
     },
 
     {
-        component: feather.MoreHorizontal,
+        component: Icons.MoreHorizontal,
         class_name: "MoreHorizontal",
         display_name: "More Horizontal",
         name: "more-horizontal",
@@ -1365,7 +1366,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.MoreVertical,
+        component: Icons.MoreVertical,
         class_name: "MoreVertical",
         display_name: "More Vertical",
         name: "more-vertical",
@@ -1373,15 +1374,15 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.MousePointer,
+        component: Icons.MousePointer,
         class_name: "MousePointer",
         display_name: "Mouse Pointer",
         name: "mouse-pointer",
-        tags: ["arrow","cursor"]
+        tags: ["arrow", "cursor"]
     },
 
     {
-        component: feather.Move,
+        component: Icons.Move,
         class_name: "Move",
         display_name: "Move",
         name: "move",
@@ -1389,7 +1390,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.Music,
+        component: Icons.Music,
         class_name: "Music",
         display_name: "Music",
         name: "music",
@@ -1397,23 +1398,23 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.Navigation2,
+        component: Icons.Navigation2,
         class_name: "Navigation2",
         display_name: "Navigation 2",
         name: "navigation-2",
-        tags: ["location","travel"]
+        tags: ["location", "travel"]
     },
 
     {
-        component: feather.Navigation,
+        component: Icons.Navigation,
         class_name: "Navigation",
         display_name: "Navigation",
         name: "navigation",
-        tags: ["location","travel"]
+        tags: ["location", "travel"]
     },
 
     {
-        component: feather.Octagon,
+        component: Icons.Octagon,
         class_name: "Octagon",
         display_name: "Octagon",
         name: "octagon",
@@ -1421,15 +1422,15 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.Package,
+        component: Icons.Package,
         class_name: "Package",
         display_name: "Package",
         name: "package",
-        tags: ["box","container"]
+        tags: ["box", "container"]
     },
 
     {
-        component: feather.Paperclip,
+        component: Icons.Paperclip,
         class_name: "Paperclip",
         display_name: "Paperclip",
         name: "paperclip",
@@ -1437,31 +1438,31 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.PauseCircle,
+        component: Icons.PauseCircle,
         class_name: "PauseCircle",
         display_name: "Pause Circle",
         name: "pause-circle",
-        tags: ["music","audio","stop"]
+        tags: ["music", "audio", "stop"]
     },
 
     {
-        component: feather.Pause,
+        component: Icons.Pause,
         class_name: "Pause",
         display_name: "Pause",
         name: "pause",
-        tags: ["music","stop"]
+        tags: ["music", "stop"]
     },
 
     {
-        component: feather.PenTool,
+        component: Icons.PenTool,
         class_name: "PenTool",
         display_name: "Pen Tool",
         name: "pen-tool",
-        tags: ["vector","drawing"]
+        tags: ["vector", "drawing"]
     },
 
     {
-        component: feather.Percent,
+        component: Icons.Percent,
         class_name: "Percent",
         display_name: "Percent",
         name: "percent",
@@ -1469,7 +1470,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.PhoneCall,
+        component: Icons.PhoneCall,
         class_name: "PhoneCall",
         display_name: "Phone Call",
         name: "phone-call",
@@ -1477,7 +1478,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.PhoneForwarded,
+        component: Icons.PhoneForwarded,
         class_name: "PhoneForwarded",
         display_name: "Phone Forwarded",
         name: "phone-forwarded",
@@ -1485,7 +1486,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.PhoneIncoming,
+        component: Icons.PhoneIncoming,
         class_name: "PhoneIncoming",
         display_name: "Phone Incoming",
         name: "phone-incoming",
@@ -1493,7 +1494,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.PhoneMissed,
+        component: Icons.PhoneMissed,
         class_name: "PhoneMissed",
         display_name: "Phone Missed",
         name: "phone-missed",
@@ -1501,15 +1502,15 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.PhoneOff,
+        component: Icons.PhoneOff,
         class_name: "PhoneOff",
         display_name: "Phone Off",
         name: "phone-off",
-        tags: ["call","mute"]
+        tags: ["call", "mute"]
     },
 
     {
-        component: feather.PhoneOutgoing,
+        component: Icons.PhoneOutgoing,
         class_name: "PhoneOutgoing",
         display_name: "Phone Outgoing",
         name: "phone-outgoing",
@@ -1517,7 +1518,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.Phone,
+        component: Icons.Phone,
         class_name: "Phone",
         display_name: "Phone",
         name: "phone",
@@ -1525,79 +1526,79 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.PieChart,
+        component: Icons.PieChart,
         class_name: "PieChart",
         display_name: "Pie Chart",
         name: "pie-chart",
-        tags: ["statistics","diagram"]
+        tags: ["statistics", "diagram"]
     },
 
     {
-        component: feather.PlayCircle,
+        component: Icons.PlayCircle,
         class_name: "PlayCircle",
         display_name: "Play Circle",
         name: "play-circle",
-        tags: ["music","start"]
+        tags: ["music", "start"]
     },
 
     {
-        component: feather.Play,
+        component: Icons.Play,
         class_name: "Play",
         display_name: "Play",
         name: "play",
-        tags: ["music","start"]
+        tags: ["music", "start"]
     },
 
     {
-        component: feather.PlusCircle,
+        component: Icons.PlusCircle,
         class_name: "PlusCircle",
         display_name: "Plus Circle",
         name: "plus-circle",
-        tags: ["add","new"]
+        tags: ["add", "new"]
     },
 
     {
-        component: feather.PlusSquare,
+        component: Icons.PlusSquare,
         class_name: "PlusSquare",
         display_name: "Plus Square",
         name: "plus-square",
-        tags: ["add","new"]
+        tags: ["add", "new"]
     },
 
     {
-        component: feather.Plus,
+        component: Icons.Plus,
         class_name: "Plus",
         display_name: "Plus",
         name: "plus",
-        tags: ["add","new"]
+        tags: ["add", "new"]
     },
 
     {
-        component: feather.Pocket,
+        component: Icons.Pocket,
         class_name: "Pocket",
         display_name: "Pocket",
         name: "pocket",
-        tags: ["logo","save"]
+        tags: ["logo", "save"]
     },
 
     {
-        component: feather.Power,
+        component: Icons.Power,
         class_name: "Power",
         display_name: "Power",
         name: "power",
-        tags: ["on","off"]
+        tags: ["on", "off"]
     },
 
     {
-        component: feather.Printer,
+        component: Icons.Printer,
         class_name: "Printer",
         display_name: "Printer",
         name: "printer",
-        tags: ["fax","office","device"]
+        tags: ["fax", "office", "device"]
     },
 
     {
-        component: feather.Radio,
+        component: Icons.Radio,
         class_name: "Radio",
         display_name: "Radio",
         name: "radio",
@@ -1605,7 +1606,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.RefreshCcw,
+        component: Icons.RefreshCcw,
         class_name: "RefreshCcw",
         display_name: "Refresh Ccw",
         name: "refresh-ccw",
@@ -1613,23 +1614,23 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.RefreshCw,
+        component: Icons.RefreshCw,
         class_name: "RefreshCw",
         display_name: "Refresh Cw",
         name: "refresh-cw",
-        tags: ["synchronise","arrows"]
+        tags: ["synchronise", "arrows"]
     },
 
     {
-        component: feather.Repeat,
+        component: Icons.Repeat,
         class_name: "Repeat",
         display_name: "Repeat",
         name: "repeat",
-        tags: ["loop","arrows"]
+        tags: ["loop", "arrows"]
     },
 
     {
-        component: feather.Rewind,
+        component: Icons.Rewind,
         class_name: "Rewind",
         display_name: "Rewind",
         name: "rewind",
@@ -1637,7 +1638,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.RotateCcw,
+        component: Icons.RotateCcw,
         class_name: "RotateCcw",
         display_name: "Rotate Ccw",
         name: "rotate-ccw",
@@ -1645,7 +1646,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.RotateCw,
+        component: Icons.RotateCw,
         class_name: "RotateCw",
         display_name: "Rotate Cw",
         name: "rotate-cw",
@@ -1653,15 +1654,15 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.Rss,
+        component: Icons.Rss,
         class_name: "Rss",
         display_name: "Rss",
         name: "rss",
-        tags: ["feed","subscribe"]
+        tags: ["feed", "subscribe"]
     },
 
     {
-        component: feather.Save,
+        component: Icons.Save,
         class_name: "Save",
         display_name: "Save",
         name: "save",
@@ -1669,7 +1670,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.Scissors,
+        component: Icons.Scissors,
         class_name: "Scissors",
         display_name: "Scissors",
         name: "scissors",
@@ -1677,23 +1678,23 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.Search,
+        component: Icons.Search,
         class_name: "Search",
         display_name: "Search",
         name: "search",
-        tags: ["find","magnifier","magnifying glass"]
+        tags: ["find", "magnifier", "magnifying glass"]
     },
 
     {
-        component: feather.Send,
+        component: Icons.Send,
         class_name: "Send",
         display_name: "Send",
         name: "send",
-        tags: ["message","mail","email","paper airplane","paper aeroplane"]
+        tags: ["message", "mail", "email", "paper airplane", "paper aeroplane"]
     },
 
     {
-        component: feather.Server,
+        component: Icons.Server,
         class_name: "Server",
         display_name: "Server",
         name: "server",
@@ -1701,23 +1702,23 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.Settings,
+        component: Icons.Settings,
         class_name: "Settings",
         display_name: "Settings",
         name: "settings",
-        tags: ["cog","edit","gear","preferences"]
+        tags: ["cog", "edit", "gear", "preferences"]
     },
 
     {
-        component: feather.Share2,
+        component: Icons.Share2,
         class_name: "Share2",
         display_name: "Share 2",
         name: "share-2",
-        tags: ["network","connections"]
+        tags: ["network", "connections"]
     },
 
     {
-        component: feather.Share,
+        component: Icons.Share,
         class_name: "Share",
         display_name: "Share",
         name: "share",
@@ -1725,39 +1726,39 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.ShieldOff,
+        component: Icons.ShieldOff,
         class_name: "ShieldOff",
         display_name: "Shield Off",
         name: "shield-off",
-        tags: ["security","insecure"]
+        tags: ["security", "insecure"]
     },
 
     {
-        component: feather.Shield,
+        component: Icons.Shield,
         class_name: "Shield",
         display_name: "Shield",
         name: "shield",
-        tags: ["security","secure"]
+        tags: ["security", "secure"]
     },
 
     {
-        component: feather.ShoppingBag,
+        component: Icons.ShoppingBag,
         class_name: "ShoppingBag",
         display_name: "Shopping Bag",
         name: "shopping-bag",
-        tags: ["ecommerce","cart","purchase","store"]
+        tags: ["ecommerce", "cart", "purchase", "store"]
     },
 
     {
-        component: feather.ShoppingCart,
+        component: Icons.ShoppingCart,
         class_name: "ShoppingCart",
         display_name: "Shopping Cart",
         name: "shopping-cart",
-        tags: ["ecommerce","cart","purchase","store"]
+        tags: ["ecommerce", "cart", "purchase", "store"]
     },
 
     {
-        component: feather.Shuffle,
+        component: Icons.Shuffle,
         class_name: "Shuffle",
         display_name: "Shuffle",
         name: "shuffle",
@@ -1765,7 +1766,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.Sidebar,
+        component: Icons.Sidebar,
         class_name: "Sidebar",
         display_name: "Sidebar",
         name: "sidebar",
@@ -1773,7 +1774,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.SkipBack,
+        component: Icons.SkipBack,
         class_name: "SkipBack",
         display_name: "Skip Back",
         name: "skip-back",
@@ -1781,7 +1782,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.SkipForward,
+        component: Icons.SkipForward,
         class_name: "SkipForward",
         display_name: "Skip Forward",
         name: "skip-forward",
@@ -1789,7 +1790,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.Slack,
+        component: Icons.Slack,
         class_name: "Slack",
         display_name: "Slack",
         name: "slack",
@@ -1797,47 +1798,47 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.Slash,
+        component: Icons.Slash,
         class_name: "Slash",
         display_name: "Slash",
         name: "slash",
-        tags: ["ban","no"]
+        tags: ["ban", "no"]
     },
 
     {
-        component: feather.Sliders,
+        component: Icons.Sliders,
         class_name: "Sliders",
         display_name: "Sliders",
         name: "sliders",
-        tags: ["settings","controls"]
+        tags: ["settings", "controls"]
     },
 
     {
-        component: feather.Smartphone,
+        component: Icons.Smartphone,
         class_name: "Smartphone",
         display_name: "Smartphone",
         name: "smartphone",
-        tags: ["cellphone","device"]
+        tags: ["cellphone", "device"]
     },
 
     {
-        component: feather.Smile,
+        component: Icons.Smile,
         class_name: "Smile",
         display_name: "Smile",
         name: "smile",
-        tags: ["emoji","face","happy","good","emotion"]
+        tags: ["emoji", "face", "happy", "good", "emotion"]
     },
 
     {
-        component: feather.Speaker,
+        component: Icons.Speaker,
         class_name: "Speaker",
         display_name: "Speaker",
         name: "speaker",
-        tags: ["audio","music"]
+        tags: ["audio", "music"]
     },
 
     {
-        component: feather.Square,
+        component: Icons.Square,
         class_name: "Square",
         display_name: "Square",
         name: "square",
@@ -1845,47 +1846,47 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.Star,
+        component: Icons.Star,
         class_name: "Star",
         display_name: "Star",
         name: "star",
-        tags: ["bookmark","favorite","like"]
+        tags: ["bookmark", "favorite", "like"]
     },
 
     {
-        component: feather.StopCircle,
+        component: Icons.StopCircle,
         class_name: "StopCircle",
         display_name: "Stop Circle",
         name: "stop-circle",
-        tags: ["media","music"]
+        tags: ["media", "music"]
     },
 
     {
-        component: feather.Sun,
+        component: Icons.Sun,
         class_name: "Sun",
         display_name: "Sun",
         name: "sun",
-        tags: ["brightness","weather","light"]
+        tags: ["brightness", "weather", "light"]
     },
 
     {
-        component: feather.Sunrise,
+        component: Icons.Sunrise,
         class_name: "Sunrise",
         display_name: "Sunrise",
         name: "sunrise",
-        tags: ["weather","time","morning","day"]
+        tags: ["weather", "time", "morning", "day"]
     },
 
     {
-        component: feather.Sunset,
+        component: Icons.Sunset,
         class_name: "Sunset",
         display_name: "Sunset",
         name: "sunset",
-        tags: ["weather","time","evening","night"]
+        tags: ["weather", "time", "evening", "night"]
     },
 
     {
-        component: feather.Tablet,
+        component: Icons.Tablet,
         class_name: "Tablet",
         display_name: "Tablet",
         name: "tablet",
@@ -1893,7 +1894,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.Tag,
+        component: Icons.Tag,
         class_name: "Tag",
         display_name: "Tag",
         name: "tag",
@@ -1901,87 +1902,87 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.Target,
+        component: Icons.Target,
         class_name: "Target",
         display_name: "Target",
         name: "target",
-        tags: ["logo","bullseye"]
+        tags: ["logo", "bullseye"]
     },
 
     {
-        component: feather.Terminal,
+        component: Icons.Terminal,
         class_name: "Terminal",
         display_name: "Terminal",
         name: "terminal",
-        tags: ["code","command line","prompt"]
+        tags: ["code", "command line", "prompt"]
     },
 
     {
-        component: feather.Thermometer,
+        component: Icons.Thermometer,
         class_name: "Thermometer",
         display_name: "Thermometer",
         name: "thermometer",
-        tags: ["temperature","celsius","fahrenheit","weather"]
+        tags: ["temperature", "celsius", "fahrenheit", "weather"]
     },
 
     {
-        component: feather.ThumbsDown,
+        component: Icons.ThumbsDown,
         class_name: "ThumbsDown",
         display_name: "Thumbs Down",
         name: "thumbs-down",
-        tags: ["dislike","bad","emotion"]
+        tags: ["dislike", "bad", "emotion"]
     },
 
     {
-        component: feather.ThumbsUp,
+        component: Icons.ThumbsUp,
         class_name: "ThumbsUp",
         display_name: "Thumbs Up",
         name: "thumbs-up",
-        tags: ["like","good","emotion"]
+        tags: ["like", "good", "emotion"]
     },
 
     {
-        component: feather.ToggleLeft,
+        component: Icons.ToggleLeft,
         class_name: "ToggleLeft",
         display_name: "Toggle Left",
         name: "toggle-left",
-        tags: ["on","off","switch"]
+        tags: ["on", "off", "switch"]
     },
 
     {
-        component: feather.ToggleRight,
+        component: Icons.ToggleRight,
         class_name: "ToggleRight",
         display_name: "Toggle Right",
         name: "toggle-right",
-        tags: ["on","off","switch"]
+        tags: ["on", "off", "switch"]
     },
 
     {
-        component: feather.Tool,
+        component: Icons.Tool,
         class_name: "Tool",
         display_name: "Tool",
         name: "tool",
-        tags: ["settings","spanner"]
+        tags: ["settings", "spanner"]
     },
 
     {
-        component: feather.Trash2,
+        component: Icons.Trash2,
         class_name: "Trash2",
         display_name: "Trash 2",
         name: "trash-2",
-        tags: ["garbage","delete","remove","bin"]
+        tags: ["garbage", "delete", "remove", "bin"]
     },
 
     {
-        component: feather.Trash,
+        component: Icons.Trash,
         class_name: "Trash",
         display_name: "Trash",
         name: "trash",
-        tags: ["garbage","delete","remove","bin"]
+        tags: ["garbage", "delete", "remove", "bin"]
     },
 
     {
-        component: feather.Trello,
+        component: Icons.Trello,
         class_name: "Trello",
         display_name: "Trello",
         name: "trello",
@@ -1989,7 +1990,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.TrendingDown,
+        component: Icons.TrendingDown,
         class_name: "TrendingDown",
         display_name: "Trending Down",
         name: "trending-down",
@@ -1997,7 +1998,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.TrendingUp,
+        component: Icons.TrendingUp,
         class_name: "TrendingUp",
         display_name: "Trending Up",
         name: "trending-up",
@@ -2005,7 +2006,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.Triangle,
+        component: Icons.Triangle,
         class_name: "Triangle",
         display_name: "Triangle",
         name: "triangle",
@@ -2013,23 +2014,23 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.Truck,
+        component: Icons.Truck,
         class_name: "Truck",
         display_name: "Truck",
         name: "truck",
-        tags: ["delivery","van","shipping","transport","lorry"]
+        tags: ["delivery", "van", "shipping", "transport", "lorry"]
     },
 
     {
-        component: feather.Tv,
+        component: Icons.Tv,
         class_name: "Tv",
         display_name: "Tv",
         name: "tv",
-        tags: ["television","stream"]
+        tags: ["television", "stream"]
     },
 
     {
-        component: feather.Twitch,
+        component: Icons.Twitch,
         class_name: "Twitch",
         display_name: "Twitch",
         name: "twitch",
@@ -2037,15 +2038,15 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.Twitter,
+        component: Icons.Twitter,
         class_name: "Twitter",
         display_name: "Twitter",
         name: "twitter",
-        tags: ["logo","social"]
+        tags: ["logo", "social"]
     },
 
     {
-        component: feather.Type,
+        component: Icons.Type,
         class_name: "Type",
         display_name: "Type",
         name: "type",
@@ -2053,15 +2054,15 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.Umbrella,
+        component: Icons.Umbrella,
         class_name: "Umbrella",
         display_name: "Umbrella",
         name: "umbrella",
-        tags: ["rain","weather"]
+        tags: ["rain", "weather"]
     },
 
     {
-        component: feather.Underline,
+        component: Icons.Underline,
         class_name: "Underline",
         display_name: "Underline",
         name: "underline",
@@ -2069,7 +2070,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.Unlock,
+        component: Icons.Unlock,
         class_name: "Unlock",
         display_name: "Unlock",
         name: "unlock",
@@ -2077,7 +2078,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.UploadCloud,
+        component: Icons.UploadCloud,
         class_name: "UploadCloud",
         display_name: "Upload Cloud",
         name: "upload-cloud",
@@ -2085,7 +2086,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.Upload,
+        component: Icons.Upload,
         class_name: "Upload",
         display_name: "Upload",
         name: "upload",
@@ -2093,47 +2094,47 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.UserCheck,
+        component: Icons.UserCheck,
         class_name: "UserCheck",
         display_name: "User Check",
         name: "user-check",
-        tags: ["followed","subscribed"]
+        tags: ["followed", "subscribed"]
     },
 
     {
-        component: feather.UserMinus,
+        component: Icons.UserMinus,
         class_name: "UserMinus",
         display_name: "User Minus",
         name: "user-minus",
-        tags: ["delete","remove","unfollow","unsubscribe"]
+        tags: ["delete", "remove", "unfollow", "unsubscribe"]
     },
 
     {
-        component: feather.UserPlus,
+        component: Icons.UserPlus,
         class_name: "UserPlus",
         display_name: "User Plus",
         name: "user-plus",
-        tags: ["new","add","create","follow","subscribe"]
+        tags: ["new", "add", "create", "follow", "subscribe"]
     },
 
     {
-        component: feather.UserX,
+        component: Icons.UserX,
         class_name: "UserX",
         display_name: "User X",
         name: "user-x",
-        tags: ["delete","remove","unfollow","unsubscribe","unavailable"]
+        tags: ["delete", "remove", "unfollow", "unsubscribe", "unavailable"]
     },
 
     {
-        component: feather.User,
+        component: Icons.User,
         class_name: "User",
         display_name: "User",
         name: "user",
-        tags: ["person","account"]
+        tags: ["person", "account"]
     },
 
     {
-        component: feather.Users,
+        component: Icons.Users,
         class_name: "Users",
         display_name: "Users",
         name: "users",
@@ -2141,23 +2142,23 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.VideoOff,
+        component: Icons.VideoOff,
         class_name: "VideoOff",
         display_name: "Video Off",
         name: "video-off",
-        tags: ["camera","movie","film"]
+        tags: ["camera", "movie", "film"]
     },
 
     {
-        component: feather.Video,
+        component: Icons.Video,
         class_name: "Video",
         display_name: "Video",
         name: "video",
-        tags: ["camera","movie","film"]
+        tags: ["camera", "movie", "film"]
     },
 
     {
-        component: feather.Voicemail,
+        component: Icons.Voicemail,
         class_name: "Voicemail",
         display_name: "Voicemail",
         name: "voicemail",
@@ -2165,47 +2166,47 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.Volume1,
+        component: Icons.Volume1,
         class_name: "Volume1",
         display_name: "Volume 1",
         name: "volume-1",
-        tags: ["music","sound"]
+        tags: ["music", "sound"]
     },
 
     {
-        component: feather.Volume2,
+        component: Icons.Volume2,
         class_name: "Volume2",
         display_name: "Volume 2",
         name: "volume-2",
-        tags: ["music","sound"]
+        tags: ["music", "sound"]
     },
 
     {
-        component: feather.VolumeX,
+        component: Icons.VolumeX,
         class_name: "VolumeX",
         display_name: "Volume X",
         name: "volume-x",
-        tags: ["music","sound","mute"]
+        tags: ["music", "sound", "mute"]
     },
 
     {
-        component: feather.Volume,
+        component: Icons.Volume,
         class_name: "Volume",
         display_name: "Volume",
         name: "volume",
-        tags: ["music","sound","mute"]
+        tags: ["music", "sound", "mute"]
     },
 
     {
-        component: feather.Watch,
+        component: Icons.Watch,
         class_name: "Watch",
         display_name: "Watch",
         name: "watch",
-        tags: ["clock","time"]
+        tags: ["clock", "time"]
     },
 
     {
-        component: feather.WifiOff,
+        component: Icons.WifiOff,
         class_name: "WifiOff",
         display_name: "Wifi Off",
         name: "wifi-off",
@@ -2213,79 +2214,79 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.Wifi,
+        component: Icons.Wifi,
         class_name: "Wifi",
         display_name: "Wifi",
         name: "wifi",
-        tags: ["connection","signal","wireless"]
+        tags: ["connection", "signal", "wireless"]
     },
 
     {
-        component: feather.Wind,
+        component: Icons.Wind,
         class_name: "Wind",
         display_name: "Wind",
         name: "wind",
-        tags: ["weather","air"]
+        tags: ["weather", "air"]
     },
 
     {
-        component: feather.XCircle,
+        component: Icons.XCircle,
         class_name: "XCircle",
         display_name: "X Circle",
         name: "x-circle",
-        tags: ["cancel","close","delete","remove","times","clear"]
+        tags: ["cancel", "close", "delete", "remove", "times", "clear"]
     },
 
     {
-        component: feather.XOctagon,
+        component: Icons.XOctagon,
         class_name: "XOctagon",
         display_name: "X Octagon",
         name: "x-octagon",
-        tags: ["delete","stop","alert","warning","times","clear"]
+        tags: ["delete", "stop", "alert", "warning", "times", "clear"]
     },
 
     {
-        component: feather.XSquare,
+        component: Icons.XSquare,
         class_name: "XSquare",
         display_name: "X Square",
         name: "x-square",
-        tags: ["cancel","close","delete","remove","times","clear"]
+        tags: ["cancel", "close", "delete", "remove", "times", "clear"]
     },
 
     {
-        component: feather.X,
+        component: Icons.X,
         class_name: "X",
         display_name: "X",
         name: "x",
-        tags: ["cancel","close","delete","remove","times","clear"]
+        tags: ["cancel", "close", "delete", "remove", "times", "clear"]
     },
 
     {
-        component: feather.Youtube,
+        component: Icons.Youtube,
         class_name: "Youtube",
         display_name: "Youtube",
         name: "youtube",
-        tags: ["logo","video","play"]
+        tags: ["logo", "video", "play"]
     },
 
     {
-        component: feather.ZapOff,
+        component: Icons.ZapOff,
         class_name: "ZapOff",
         display_name: "Zap Off",
         name: "zap-off",
-        tags: ["flash","camera","lightning"]
+        tags: ["flash", "camera", "lightning"]
     },
 
     {
-        component: feather.Zap,
+        component: Icons.Zap,
         class_name: "Zap",
         display_name: "Zap",
         name: "zap",
-        tags: ["flash","camera","lightning"]
+        tags: ["flash", "camera", "lightning"]
     },
 
     {
-        component: feather.ZoomIn,
+        component: Icons.ZoomIn,
         class_name: "ZoomIn",
         display_name: "Zoom In",
         name: "zoom-in",
@@ -2293,7 +2294,7 @@ export const ICON_MANIFEST = [
     },
 
     {
-        component: feather.ZoomOut,
+        component: Icons.ZoomOut,
         class_name: "ZoomOut",
         display_name: "Zoom Out",
         name: "zoom-out",

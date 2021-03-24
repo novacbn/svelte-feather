@@ -1,12 +1,9 @@
 export default ({icons}) => {
     let all_tags = new Set();
-    let icon_map = [];
     let icon_manifest = [];
 
     icons.map(({class_name, display_name, icon}) => {
         for (const tag of icon.tags) all_tags.add(tag);
-
-        icon_map.push(`    ${class_name}: feather.${class_name}`);
 
         icon_manifest.push(`    {
         component: Icons.${class_name},
@@ -17,7 +14,6 @@ export default ({icons}) => {
     }`);
     });
 
-    icon_map = icon_map.join(",\n");
     icon_manifest = icon_manifest.join(",\n\n");
 
     all_tags = Array.from(all_tags);
@@ -33,7 +29,7 @@ export const ICON_DEFAULTS = {
     fill: "none",
     linecap: "round",
     linejoin: "round",
-    size: ICON_SIZES.default,
+    size: ICON_SIZES.large,
     width: "2px"
 };
 

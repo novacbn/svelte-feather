@@ -1,16 +1,24 @@
 <script>
     import {createEventDispatcher} from "svelte";
 
-    import {ICON_TAGS} from "../icons";
+    import {ICON_TAGS} from "../../icons";
 
     const dispatch = createEventDispatcher();
 
-    function on_tag_click(event, tag) {
+    function on_anchor_click(event, tag) {
         event.preventDefault();
 
         dispatch("click", {tag});
     }
 </script>
+
+<p>
+    {#each ICON_TAGS as tag (tag)}
+        <a href="#" on:click={(event) => on_anchor_click(event, tag)}>
+            <span class="tag is-small bg-primary text-light">{tag}</span>
+        </a>
+    {/each}
+</p>
 
 <style>
     p {
@@ -31,11 +39,3 @@
         white-space: nowrap;
     }
 </style>
-
-<p>
-    {#each ICON_TAGS as tag (tag)}
-        <a href="#" on:click={(event) => on_tag_click(event, tag)}>
-            <span class="badge is-small bg-primary text-light">{tag}</span>
-        </a>
-    {/each}
-</p>
