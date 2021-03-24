@@ -9,7 +9,7 @@ export default ({icons}) => {
         icon_map.push(`    ${class_name}: feather.${class_name}`);
 
         icon_manifest.push(`    {
-        component: feather.${class_name},
+        component: Icons.${class_name},
         class_name: "${class_name}",
         display_name: "${display_name}",
         name: "${icon.name}",
@@ -25,14 +25,15 @@ export default ({icons}) => {
 
     all_tags = JSON.stringify(all_tags, null, 4);
 
-    return `import {Icons} from "svelte-feather/components";
+    return `import {ICON_SIZES} from "svelte-feather";
+import {Icons} from "svelte-feather/components";
 
 export const ICON_DEFAULTS = {
     color: "currentColor",
     fill: "none",
     linecap: "round",
     linejoin: "round",
-    size: feather.ICON_SIZES.default,
+    size: ICON_SIZES.default,
     width: "2px"
 };
 

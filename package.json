@@ -12,6 +12,7 @@
     "exports": {
         "./package.json": "./package.json",
         ".": "./index.js",
+        "./components": "./components/index.js",
         "./components/*": "./components/*"
     },
     "engines": {

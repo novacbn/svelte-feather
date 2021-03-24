@@ -1,3 +1,4 @@
 /node_modules/
-/docs/public/dist/
+/dist/docs/
+/docs/.svelte
 /docs/node_modules/
