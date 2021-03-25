@@ -2,18 +2,22 @@
 
 > [Feather Icons](https://feathericons.com) as [Svelte](https://svelte.dev) Components
 
+## Icon Viewer
+
+Visit the [Icon Viewer](https://novacbn.github.io/svelte-feather) to find all the available Icon Components and import examples.
+
 ## Installation
 
 ### Latest Release
 
 ```sh
-npm install git+https://github.com/novacbn/svelte-feather#0.0.1
+npm install github:novacbn/svelte-feather#0.1.0
 ```
 
 ### Current `master` Branch
 
 ```sh
-npm install git+https://github.com/novacbn/svelte-feather
+npm install github:novacbn/svelte-feather
 ```
 
 ## Usage
@@ -22,81 +26,75 @@ Goto to the [Icon Viewer](https://novacbn.github.io/svelte-feather) and find the
 
 ```html
 <script>
-    import {IconGithub} from "svelte-feather";
+    import {Icons} from "svelte-feather/components";
 </script>
 
-<IconGithub size="large" />
+<Icons.Github size="large" />
 ```
 
-Alternatively, you can do "fine-grained" imports as-well if your environment supports it:
+Alternatively, you can do "fine-grained" imports as-well if your environment supports it, for better Build Tools / IDE experience:
 
 ```html
 <script>
-    import IconGithub from "svelte-feather/lib/components/IconGithub.svelte";
+    import Github from "svelte-feather/components/Github";
 </script>
 
-<IconGithub size="large" />
+<Github size="large" />
 ```
 
 ## Properties
 
-| Name       | Type     | Default                                                                                                  | Enumeration                                                                                                                      |
-| ---------- | -------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| Name       | Type     | Default                                                                                                  | Enumeration                                                                                                                                |
+| ---------- | -------- | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
 | `class`    | `string` | `` | [HTML `class` Attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/class) |
 | `style`    | `string` | `` | [HTML `style` Attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/style) |
-| `color`    | `string` | `currentColor`                                                                                           | [CSS Color Data Type](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value)                                              |
-| `size`     | `string` | `default`                                                                                                | `["default", "tiny", "small", "large", "huge"]`, [CSS Length Data Type](https://developer.mozilla.org/en-US/docs/Web/CSS/length) |
-| `width`    | `string` | `2px`                                                                                                    | [CSS Length Data Type](https://developer.mozilla.org/en-US/docs/Web/CSS/length)                                                  |
-| `fill`     | `string` | `none`                                                                                                   | [SVG `fill` Attribute](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill)                                          |
-| `linecap`  | `string` | `round`                                                                                                  | [SVG `stroke-linecap` Attribute](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linecap)                      |
-| `linejoin` | `string` | `round`                                                                                                  | [SVG `stroke-linejoin` Attribute](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linejoin)                    |
+| `color`    | `string` | `currentColor`                                                                                           | [CSS Color Data Type](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value)                                                        |
+| `size`     | `string` | `default`                                                                                                | `["default", "tiny", "small", "medium", "large", "huge"]`, [CSS Length Data Type](https://developer.mozilla.org/en-US/docs/Web/CSS/length) |
+| `width`    | `string` | `1em`                                                                                                    | [CSS Length Data Type](https://developer.mozilla.org/en-US/docs/Web/CSS/length)                                                            |
+| `fill`     | `string` | `none`                                                                                                   | [SVG `fill` Attribute](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill)                                                    |
+| `linecap`  | `string` | `round`                                                                                                  | [SVG `stroke-linecap` Attribute](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linecap)                                |
+| `linejoin` | `string` | `round`                                                                                                  | [SVG `stroke-linejoin` Attribute](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linejoin)                              |
 
-## Building
+## Development
 
-To build `svelte-feather` from source, first use `npm ci` to install all the dependencies. Then use the below commands to execute the build-pipeline
+### Building Package
 
-### `npm run script:icons`
+To build `svelte-feather` from source, first use `npm ci` to install all the dependencies. Use the commands below to execute the build-pipline.
+
+#### `npm run build:icons`
+
+Runs through `build:icons:generate` -> `build:icons:webcomponents` pipeline.
+
+#### `npm run build:icons:generate`
 
 Imports the icon data from the [`feathericons/feather`](https://github.com/feathericons/feather) NPM package, and generates the following:
 
--   `lib/components/${class_name}.svelte` — The Svelte Component of each SVG icon
--   `lib/components/index.js` — The import module that collects every Svelte Component and re-exports them
+-   `components/${class_name}.svelte` — The Svelte Component of each SVG icon
+-   `components/${class_name}.js` — Stub re-exporter file to improve DX around "fine-grained" imports
+-   `components/index.js` — The import module that collects every Svelte Component and re-exports them
+-   `components/webcomponents.js` — Similar to above, but without re-exporting to save file size space in WebComponents build
 -   `docs/src/icons.js` — The documentation manifest, which imports all the Svelte Components from `svelte-feather` and associates them with metadata
 
-### `npm run prettify:icons`
+#### `npm run build:icons:webcomponents`
 
-Runs [Prettier](https://prettier.io) on every generated Svelte Component, to standardize the output.
+Uses [ESBuild](https://github.com/evanw/esbuild) to build and bundle all the Svelte Components together in a single file as [WebComponents](https://developer.mozilla.org/en-US/docs/Web/Web_Components).
 
-### `npm run link:package`
+#### `npm run prebuild:clean`
 
-> **IMPORTANT**: This **MUST** be ran before utilizing documentation pipeline!
+Runs `rimraf ./dist/;rimraf ./components` to wipe current build of Icon Components and WebComponents bundle.
 
-Runs [`npm link`](https://docs.npmjs.com/cli/link.html) on the main package.
+### Building Icon Viewer
 
-### `npm run build:icons`
+To build the "Icon Viewer" from source, `cd` to `docs/`. Then use `npm ci` to install all the dependencies. Use the commands below to execute the build-pipline.
 
-Runs through the following commands `script:icons -> prettify:icons`, as a complete build-pipeline.
+#### `npm run build:application`
 
-## Documentation
+Runs [SvelteKit](https://kit.svelte.dev) to build the documentation Application out to the `docs/build/` directory.
 
-> **NOTE**: While a bit rough, you can visit the current implementation of the documentation as [novacbn.github.io/svelte-feather](https://novacbn.github.io/svelte-feather).
+#### `npm run serve:application`
 
-To start building the documentation from source, open a terminal with `docs/` as the working directory. Then use the commands below.
+Similar to [`npm run build:application`](#npm-run-buildapplication), runs [SvelteKit](https://kit.svelte.dev) to serve a live-reload enabled HTTP server on port `3000` for debugging the Icon Viewer.
 
-### `npm run link:feather`
+#### `npm run prebuild:clean`
 
-> **IMPORTANT**: This **MUST** be ran before utilizing any other commands.
-
-Runs [`npm link svelte-feather`](https://docs.npmjs.com/cli/link.html) to symlink the parent `svelte-feather` directory into the `docs/node_modules` directory.
-
-### `npm run build:app`
-
-Runs [`NODE_ENV=production svelvet`](https://github.com/jakedeichert/svelvet) to build the documentation Application out to the `docs/public/dist` directory.
-
-### `npm run serve:app`
-
-Similar to [`npm run build:app`](#npm-run-buildapp), runs [`svelvet`](https://github.com/jakedeichert/svelvet) to serve a live-reload enabled HTTP server on port `8080` for debugging the documentation.
-
-### `npm run prebuild:clean`
-
-Runs `rimraf ./public/dist` to wipe the currently build documentation Application.
+Runs `rimraf ./build` to wipe the current Icon Viewer build.
