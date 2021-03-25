@@ -119,7 +119,7 @@
         background-color: var(--bg-secondary-color);
         box-shadow: none;
 
-        z-index: 2;
+        z-index: 1;
     }
 
     @media screen and (min-width: 900px) {
