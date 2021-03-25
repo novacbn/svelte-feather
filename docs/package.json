@@ -11,7 +11,7 @@
     },
     "dependencies": {
         "chota": "^0.8.0",
-        "svelte-commons": "git+https://github.com/novacbn/svelte-commons.git#0.1.2",
+        "prismjs": "^1.23.0",
         "svelte-feather": "file:.."
     },
     "devDependencies": {

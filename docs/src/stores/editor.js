@@ -13,8 +13,8 @@ const DEFAULT_DATA = {
 
 export const CONTEXT_EDITOR = Symbol.for("editor-data");
 
-export function editor_data() {
-    const {set, subscribe, update} = writable({...DEFAULT_DATA});
+export function editor_data(data = {}) {
+    const {set, subscribe, update} = writable({...DEFAULT_DATA, ...data});
 
     return {
         set,

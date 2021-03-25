@@ -5,6 +5,10 @@ const {cwd} = require("process");
 
 const PATH_CHOTA = join(cwd(), "node_modules/chota/dist/chota.min.css");
 
+const PATH_PRISM = join(cwd(), "node_modules/prismjs/themes/prism-tomorrow.css");
+
+const INCLUDE_CLIENT = ["prismjs"];
+
 /** @type {import('@sveltejs/kit').Config} */
 module.exports = {
     kit: {
@@ -24,8 +28,13 @@ module.exports = {
         vite: {
             resolve: {
                 alias: {
-                    "extern/styles/chota.min.css": PATH_CHOTA
+                    "extern/styles/chota.min.css": PATH_CHOTA,
+                    "extern/styles/prism.min.css": PATH_PRISM
                 }
+            },
+
+            optimizeDeps: {
+                include: INCLUDE_CLIENT
             },
 
             ssr: {

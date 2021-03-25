@@ -11,10 +11,12 @@
 
     import * as Editor from "../components/editor";
     import * as Grid from "../components/grid";
+    import * as Overlays from "../components/overlays";
 
     const store = editor_data();
     setContext(CONTEXT_EDITOR, store);
 
+    let class_name = "";
     let search = "";
 
     function is_visible(icon, search) {
@@ -29,6 +31,12 @@
         return false;
     }
 
+    function on_icon_click(event) {
+        const {class_name: _class_name} = event.detail;
+
+        class_name = _class_name;
+    }
+
     function on_tag_click(event) {
         const {tag} = event.detail;
 
@@ -41,11 +49,17 @@
     can still view the Icon Grid, even if interaction is not available
 -->
 
+{#if browser}
+    <Overlays.Icon {class_name} />
+{/if}
+
 <main class="row">
     <div class="col-12 is-marginless" class:col-9-md={browser}>
         {#if browser}
-            <Editor.Search count={ICON_MANIFEST.length} bind:value={search} />
-            <Editor.Tags on:click={on_tag_click} />
+            <div class="card search-container">
+                <Editor.Search count={ICON_MANIFEST.length} bind:value={search} />
+                <Editor.Tags on:click={on_tag_click} />
+            </div>
         {/if}
 
         <Grid.Icon>
@@ -54,7 +68,7 @@
                     visible={is_visible(icon, search)}
                     class_name={icon.class_name}
                     component={icon.component}
-                    on:click
+                    on:click={on_icon_click}
                 />
             {/each}
         </Grid.Icon>
@@ -94,6 +108,18 @@
 
     h4 {
         margin-top: 0;
+    }
+
+    .search-container {
+        position: sticky;
+        top: 0;
+
+        margin-bottom: 1.5rem;
+
+        background-color: var(--bg-secondary-color);
+        box-shadow: none;
+
+        z-index: 2;
     }
 
     @media screen and (min-width: 900px) {
