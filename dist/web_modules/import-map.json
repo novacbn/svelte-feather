@@ -1,8 +1,0 @@
-{
-  "imports": {
-    "svelte": "./svelte.js",
-    "svelte-commons": "./svelte-commons.js",
-    "svelte-feather": "./svelte-feather.js",
-    "svelte/internal": "./svelte/internal.js"
-  }
-}
