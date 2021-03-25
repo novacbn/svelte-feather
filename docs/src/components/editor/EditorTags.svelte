@@ -15,7 +15,9 @@
 <p>
     {#each ICON_TAGS as tag (tag)}
         <a href="#" on:click={(event) => on_anchor_click(event, tag)}>
-            <span class="tag is-small bg-primary text-light">{tag}</span>
+            <small>
+                <span class="tag bg-primary text-light">{tag}</span>
+            </small>
         </a>
     {/each}
 </p>
@@ -36,6 +38,9 @@
     }
 
     span {
+        border-radius: 4px;
+
+        font-weight: bold;
         white-space: nowrap;
     }
 </style>

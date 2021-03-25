@@ -1,22 +1,16 @@
 <script>
-    import {createEventDispatcher} from "svelte";
+    import {createEventDispatcher, getContext} from "svelte";
 
     import {browser} from "$app/env";
 
-    import {ICON_DEFAULTS} from "../../icons";
+    import {CONTEXT_EDITOR} from "../../stores/editor";
 
     const dispatch = createEventDispatcher();
+    const store = getContext(CONTEXT_EDITOR);
 
     export let component = null;
     export let class_name = "";
     export let visible = true;
-
-    export let color = ICON_DEFAULTS.color;
-    export let fill = ICON_DEFAULTS.fill;
-    export let linecap = ICON_DEFAULTS.linecap;
-    export let linejoin = ICON_DEFAULTS.linejoin;
-    export let size = ICON_DEFAULTS.size;
-    export let width = ICON_DEFAULTS.size;
 
     function on_anchor_click(event) {
         event.preventDefault();
@@ -37,12 +31,12 @@
                 {#if component}
                     <svelte:component
                         this={component}
-                        {color}
-                        {fill}
-                        {linecap}
-                        {linejoin}
-                        {size}
-                        {width}
+                        color={$store.color}
+                        fill={$store.fill}
+                        linecap={$store.linecap}
+                        linejoin={$store.linejoin}
+                        size={$store.size}
+                        width={$store.width}
                     />
                 {/if}
             </p>
@@ -60,12 +54,12 @@
             {#if component}
                 <svelte:component
                     this={component}
-                    {color}
-                    {fill}
-                    {linecap}
-                    {linejoin}
-                    {size}
-                    {width}
+                    color={$store.color}
+                    fill={$store.fill}
+                    linecap={$store.linecap}
+                    linejoin={$store.linejoin}
+                    size={$store.size}
+                    width={$store.width}
                 />
             {/if}
         </p>

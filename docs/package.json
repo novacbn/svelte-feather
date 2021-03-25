@@ -2,6 +2,7 @@
     "name": "svelte-feather-docs",
     "author": "novacbn",
     "version": "0.1.0",
+    "type": "module",
     "scripts": {
         "build:application": "svelte-kit build",
         "serve:application": "svelte-kit dev",

@@ -16,6 +16,10 @@ module.exports = {
         // hydrate the <div id="svelte"> element in src/app.html
         target: "body",
 
+        paths: {
+            base: "/svelte-feather/"
+        },
+
         // Consult https://vitejs.dev/config/ to learn about these options
         vite: {
             resolve: {

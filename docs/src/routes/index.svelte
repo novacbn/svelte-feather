@@ -3,22 +3,37 @@
 </script>
 
 <script>
+    import {setContext} from "svelte";
     import {browser} from "$app/env";
 
     import {ICON_MANIFEST} from "../icons";
+    import {CONTEXT_EDITOR, editor_data} from "../stores/editor";
 
     import * as Editor from "../components/editor";
     import * as Grid from "../components/grid";
 
+    const store = editor_data();
+    setContext(CONTEXT_EDITOR, store);
+
     let search = "";
 
-    let editor = null;
+    function is_visible(icon, search) {
+        if (!search) return true;
+        const {class_name, tags} = icon;
 
-    function on_reset_click(event) {
-        if (editor) editor.reset();
+        if (class_name.toLowerCase().includes(search)) return true;
+        for (const tag of tags) {
+            if (tag.toLowerCase().includes(search)) return true;
+        }
+
+        return false;
     }
 
-    function on_tag_click(event) {}
+    function on_tag_click(event) {
+        const {tag} = event.detail;
+
+        search = tag;
+    }
 </script>
 
 <!--
@@ -34,8 +49,13 @@
         {/if}
 
         <Grid.Icon>
-            {#each ICON_MANIFEST as {component, class_name, visible} (class_name)}
-                <Grid.IconItem {class_name} {component} {visible} on:click />
+            {#each ICON_MANIFEST as icon (icon.class_name)}
+                <Grid.IconItem
+                    visible={is_visible(icon, search)}
+                    class_name={icon.class_name}
+                    component={icon.component}
+                    on:click
+                />
             {/each}
         </Grid.Icon>
     </div>
@@ -50,21 +70,15 @@
                 </div>
 
                 <div class="col-5 text-right">
-                    <button on:click={on_reset_click}>RESET</button>
+                    <button on:click={store.reset.bind(null)}>RESET</button>
                 </div>
             </header>
 
-            <Editor.Controls bind:this={editor} />
+            <Editor.Controls />
         </aside>
     {/if}
 </main>
 
-<!-- {color}
-        {fill}
-        {linecap}
-        {linejoin}
-        {size}
-        {width} -->
 <style>
     main {
         margin-top: 4rem;
