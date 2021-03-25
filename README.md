@@ -20,6 +20,14 @@ npm install github:novacbn/svelte-feather#0.1.0
 npm install github:novacbn/svelte-feather
 ```
 
+### WebComponents
+
+This library can also be used standalone as [WebComponents](https://developer.mozilla.org/en-US/docs/Web/Web_Components). Just head over to [Releases](https://github.com/novacbn/svelte-feather/releases) to pick up a build and load via `<script>`:
+
+```html
+<script type="application/javascript" src="/path/to/svelte-feather.webcomponents.min.js"></script>
+```
+
 ## Usage
 
 Goto to the [Icon Viewer](https://novacbn.github.io/svelte-feather) and find the class name of the icon you want to use, then import it like so:
@@ -40,6 +48,12 @@ Alternatively, you can do "fine-grained" imports as-well if your environment sup
 </script>
 
 <Github size="large" />
+```
+
+If using via the WebComponents build, just use all-lowercase identifiers, prefixing `feather-*`. Putting dashes infront of captials:
+
+```html
+<feather-arrow-right-circle size="large" />
 ```
 
 ## Properties
