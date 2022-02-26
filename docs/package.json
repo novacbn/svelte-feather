@@ -11,7 +11,7 @@
     },
     "dependencies": {
         "chota": "^0.8.0",
-        "prismjs": "^1.23.0",
+        "prismjs": "^1.27.0",
         "svelte-feather": "file:.."
     },
     "devDependencies": {
