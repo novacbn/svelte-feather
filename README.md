@@ -1,5 +1,7 @@
 # [svelte-feather](https://novacbn.github.io/svelte-feather)
 
+> **DEPRECATED**: Check out [Lucide Icons](https://lucide.dev) a community fork of Feather Icons, they now have a [Svelte Package](https://github.com/lucide-icons/lucide/tree/master/packages/lucide-svelte) available.
+
 > [Feather Icons](https://feathericons.com) as [Svelte](https://svelte.dev) Components
 
 ## Icon Viewer
